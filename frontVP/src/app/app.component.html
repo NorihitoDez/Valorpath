@@ -1,9 +1,14 @@
 <mat-toolbar color="primary">  
   <button mat-button [matMenuTriggerFor]="menuUser"><mat-icon>person</mat-icon>Usuarios</button>
+  <button mat-button [matMenuTriggerFor]="menuAppointment"><mat-icon>local_hospital</mat-icon>Citas Medicas</button>  
 </mat-toolbar>
 
 <mat-menu #menuUser="matMenu">
   <button mat-menu-item routerLink="/usuarios">Listar</button>
   <button mat-menu-item routerLink="/usuarios/nuevo">Registrar</button>
+</mat-menu>
+<mat-menu #menuAppointment="matMenu">
+  <button mat-menu-item routerLink="/citas/nuevo">Registrar</button>
+  <button mat-menu-item routerLink="/citas">Listar</button>
 </mat-menu>
 <router-outlet></router-outlet>
