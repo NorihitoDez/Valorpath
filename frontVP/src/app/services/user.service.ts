@@ -1,44 +1,39 @@
-import { Injectable } from '@angular/core';
-import { environment } from '../../environments/environment';
-import { HttpClient } from '@angular/common/http';
-import { User } from '../models/user';
-import { Subject } from 'rxjs';
+import { Injectable } from "@angular/core";
+import { environment } from "../../environments/environment";
+import { HttpClient } from "@angular/common/http";
+import { User } from "../models/user";
+import { Subject } from "rxjs";
 
 const base = environment.base;
 
 @Injectable({
-  providedIn: 'root',
+  providedIn: "root",
 })
 export class UserService {
   private url = `${base}/usuarios`;
   private listaCambio = new Subject<User[]>();
   constructor(private http: HttpClient) {}
-  //listar usuarios
+
   list() {
     return this.http.get<User[]>(this.url);
   }
-  //insertar o registrar
-  insert(u: User) {
-    return this.http.post(this.url, u); //registrar
-  }
 
-  //metodos de acceso
-  //get (lee datos o trae datos)
-  //set (modifica datos)
-  //asObservable ayuda que se actualice la data
+  insert(u: User) {
+    return this.http.post(this.url, u);
+  }
   setList(listaNueva: User[]) {
-    this.listaCambio.next(listaNueva); //registrar
+    this.listaCambio.next(listaNueva);
   }
   getList() {
-    return this.listaCambio.asObservable(); //registrar
+    return this.listaCambio.asObservable();
   }
   listId(id: number) {
-    return this.http.get<User>(`${this.url}/${id}`);  //busca
+    return this.http.get<User>(`${this.url}/${id}`);
   }
-  update(u:User) {
-    return this.http.put(this.url, u); //guarda
+  update(u: User) {
+    return this.http.put(this.url, u);
   }
-  delete(id: number)  {
-    return this.http.delete(`${this.url}/${id}`)
+  delete(id: number) {
+    return this.http.delete(`${this.url}/${id}`);
   }
 }
