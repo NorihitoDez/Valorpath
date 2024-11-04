@@ -67,7 +67,7 @@ export class CreaeditauserComponent implements OnInit {
         '',
         [Validators.required, Validators.pattern(/^[a-zA-ZáéíóúÁÉÍÓÚÑñ]+$/)],
       ],
-      apellidos: [
+      apellidos: [  
         '',
         [Validators.required, Validators.pattern(/^[a-zA-ZáéíóúÁÉÍÓÚÑñ]+$/)],
       ],
