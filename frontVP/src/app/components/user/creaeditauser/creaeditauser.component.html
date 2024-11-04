@@ -1,7 +1,6 @@
 <div class="container">
   <h2>Registro de usuarios</h2>
   <form [formGroup]="form" (submit)="aceptar()">
-    
     <mat-form-field class="example-full-width" *ngIf="edicion">
       <mat-label>Código</mat-label>
       <input matInput placeholder="Id" formControlName="id" />

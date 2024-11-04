@@ -1,7 +1,7 @@
-import { Component, OnInit } from '@angular/core';
-import { MatSelectModule } from '@angular/material/select';
-import { MatInputModule } from '@angular/material/input';
-import { MatFormFieldModule } from '@angular/material/form-field';
+import { Component, OnInit } from "@angular/core";
+import { MatSelectModule } from "@angular/material/select";
+import { MatInputModule } from "@angular/material/input";
+import { MatFormFieldModule } from "@angular/material/form-field";
 import {
   AbstractControl,
   FormBuilder,
@@ -9,17 +9,17 @@ import {
   FormGroup,
   ReactiveFormsModule,
   Validators,
-} from '@angular/forms';
-import { CommonModule, NgIf } from '@angular/common';
-import { MatButtonModule } from '@angular/material/button';
-import { ActivatedRoute, Params, Router, RouterLink } from '@angular/router';
-import { MatDatepickerModule } from '@angular/material/datepicker';
-import { MatNativeDateModule } from '@angular/material/core';
-import { UserService } from '../../../services/user.service';
-import { User } from '../../../models/user';
+} from "@angular/forms";
+import { CommonModule, NgIf } from "@angular/common";
+import { MatButtonModule } from "@angular/material/button";
+import { ActivatedRoute, Params, Router, RouterLink } from "@angular/router";
+import { MatDatepickerModule } from "@angular/material/datepicker";
+import { MatNativeDateModule } from "@angular/material/core";
+import { UserService } from "../../../services/user.service";
+import { User } from "../../../models/user";
 
 @Component({
-  selector: 'app-creaeditauser',
+  selector: "app-creaeditauser",
   standalone: true,
   imports: [
     MatFormFieldModule,
@@ -33,49 +33,49 @@ import { User } from '../../../models/user';
     CommonModule,
     RouterLink,
   ],
-  templateUrl: './creaeditauser.component.html',
-  styleUrl: './creaeditauser.component.css',
+  templateUrl: "./creaeditauser.component.html",
+  styleUrl: "./creaeditauser.component.css",
 })
 export class CreaeditauserComponent implements OnInit {
   form: FormGroup = new FormGroup({});
-  user: User = new User(); //trae toda la data
-  mensaje: string = '';
+  user: User = new User();
+  mensaje: string = "";
   id: number = 0;
   edicion: boolean = false;
   habilitado: { value: boolean; viewValue: string }[] = [
-    { value: true, viewValue: 'Enabled' },
-    { value: false, viewValue: 'Disabled' },
+    { value: true, viewValue: "Enabled" },
+    { value: false, viewValue: "Disabled" },
   ];
 
   constructor(
-    private formBuil: FormBuilder, //donde vas al htlm y validas
-    private uS: UserService, //para inyectar y realizar parte del boton ACeptar
-    private router: Router, //enrutar
+    private formBuil: FormBuilder,
+    private uS: UserService,
+    private router: Router,
     private route: ActivatedRoute
   ) {}
   ngOnInit(): void {
     this.route.params.subscribe((data: Params) => {
-      this.id = data['id'];
-      this.edicion = data['id'] != null;
+      this.id = data["id"];
+      this.edicion = data["id"] != null;
       this.init();
     });
 
     this.form = this.formBuil.group({
-      codigo: [''],
-      dni: ['', [Validators.required, Validators.pattern(/^\d{8}$/)]],
+      codigo: [""],
+      dni: ["", [Validators.required, Validators.pattern(/^\d{8}$/)]],
       nombre: [
-        '',
+        "",
         [Validators.required, Validators.pattern(/^[a-zA-ZáéíóúÁÉÍÓÚÑñ]+$/)],
       ],
       apellidos: [
-        '',
+        "",
         [Validators.required, Validators.pattern(/^[a-zA-ZáéíóúÁÉÍÓÚÑñ]+$/)],
       ],
-      correo: ['', [Validators.required, Validators.email]],
-      password: ['', [Validators.required, Validators.maxLength(200)]],
-      cumpleanios: ['', Validators.required],
-      direccion: ['', Validators.required],
-      enabled: ['', Validators.required],
+      correo: ["", [Validators.required, Validators.email]],
+      password: ["", [Validators.required, Validators.maxLength(200)]],
+      cumpleanios: ["", Validators.required],
+      direccion: ["", Validators.required],
+      enabled: ["", Validators.required],
     });
   }
   onlyNumbers(event: KeyboardEvent) {
@@ -106,13 +106,13 @@ export class CreaeditauserComponent implements OnInit {
       } else {
         this.uS.insert(this.user).subscribe((data) => {
           this.uS.list().subscribe((data) => {
-            this.uS.setList(data); // lista nueva a listacambio
+            this.uS.setList(data);
           });
         });
       }
-      this.router.navigate(['usuarios']); // router  qme lleve a usuraios una vez dado click al aceptar
+      this.router.navigate(["usuarios"]);
     } else {
-      this.mensaje = 'Complete todos los campos, revise!!';
+      this.mensaje = "Complete todos los campos, revise!!";
     }
   }
 

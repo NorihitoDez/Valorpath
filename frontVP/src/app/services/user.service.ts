@@ -36,7 +36,7 @@ export class UserService {
   delete(id: number) {
     return this.http.delete(`${this.url}/${id}`);
   }
-  listarPorRol(rol:string) {
+  listarPorRol(rol: string) {
     return this.http.get<User[]>(`${this.url}/listarrol/${rol}`);
   }
 }

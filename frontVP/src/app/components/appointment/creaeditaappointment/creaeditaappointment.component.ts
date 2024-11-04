@@ -50,9 +50,9 @@ export class CreaeditaappointmentComponent implements OnInit{
   ];
 
   constructor(
-    private formBuil: FormBuilder, //donde vas al htlm y validas
-    private aS: AppointmentService, //para inyectar y realizar parte del boton ACeptar
-    private router: Router, //enrutar
+    private formBuil: FormBuilder, 
+    private aS: AppointmentService, 
+    private router: Router,
     private route: ActivatedRoute,
     private uS: UserService
   ) {}
