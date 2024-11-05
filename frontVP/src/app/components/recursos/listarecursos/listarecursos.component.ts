@@ -24,4 +24,12 @@ export class ListarecursosComponent implements OnInit{
       this.datasource=new MatTableDataSource(data);
     }));
   }
+  eliminar(id: number) {
+    this.rs.delete(id)
+    .subscribe((data) => {
+        this.rs.list().subscribe((data) => {
+          this.rs.setList(data);        
+        }); 
+    });
+  }
 }

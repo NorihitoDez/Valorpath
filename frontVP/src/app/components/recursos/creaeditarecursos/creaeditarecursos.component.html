@@ -1,1 +1,48 @@
-<p>creaeditarecursos works!</p>
+<div class="container">
+    <h2>Registro de recursos</h2>
+    <form [formGroup]="form" (submit)="aceptar()">
+      
+      <mat-form-field class="example-full-width" *ngIf="edicion">
+        <mat-label>Código</mat-label>
+        <input matInput placeholder="Id" formControlName="id" />
+      </mat-form-field>
+  
+      <mat-form-field class="example-full-width">
+        <mat-label>Titulo</mat-label>
+        <input matInput placeholder="Nombre" formControlName="nombre" />
+        <mat-error *ngIf="form.get('Titulo')?.hasError('required')">
+          El Titulo es obligatorio.
+        </mat-error>
+      </mat-form-field>
+  
+      <mat-form-field class="example-full-width">
+        <mat-label>Autor</mat-label>
+        <input matInput placeholder="Apellidos" formControlName="apellidos" />
+        <mat-error *ngIf="form.get('Autor')?.hasError('required')">
+          El nombre del autor es obligatorios.
+        </mat-error>
+      </mat-form-field>
+  
+      <mat-form-field class="example-full-width">
+        <mat-label>Tipo</mat-label>
+        <input matInput placeholder="Email" formControlName="correo" />
+        <mat-error *ngIf="form.get('tipo')?.hasError('required')">
+          El email es obligatorio.
+        </mat-error>
+      </mat-form-field>
+   
+      <div class="button-container">
+        <button mat-raised-button color="primary">Aceptar</button>
+        <button
+          mat-raised-button
+          color="warn"
+          routerLink="/usuarios"
+          class="cancel"
+        >
+          Cancelar
+        </button>
+      </div>
+  
+      <p>{{ mensaje }}</p>
+    </form>
+  </div>
