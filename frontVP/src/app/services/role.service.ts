@@ -31,4 +31,16 @@ getlist(){
   return this.listaCambio.asObservable();
 }
 
+delete(id:number){
+  return this.http.delete(`${this.url}/${id}`)
+}
+
+listid(id:number){
+  return this.http.get<Role>(`${this.url}/${id}`);
+}
+
+update(r:Role){
+  return this.http.put(this.url,r);
+}
+
 }

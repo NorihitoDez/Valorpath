@@ -28,4 +28,9 @@
     background-color: #FFD700; /* Fondo amarillo al pasar el mouse */
     color: #000; /* Texto negro para mantener la legibilidad */
   }
+
+  .logo-image {
+    height: 40px; /* Ajusta el tamaño según lo desees */
+    max-width: 100%;
+  }
   
