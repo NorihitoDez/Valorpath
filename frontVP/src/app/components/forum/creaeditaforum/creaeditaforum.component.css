@@ -1,0 +1,52 @@
+/* Centra el contenedor */
+mat-form-field{
+    width: 100%;
+}
+.container {
+    text-align: center;
+    margin: 5%;
+  }
+  
+  /* Estilo para el título */
+  .container h1 {
+    font-size: 2em;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #333;
+  }
+  
+  /* Mensaje de error */
+  .error-message {
+    color: red;
+    font-size: 1em;
+    margin-bottom: 10px;
+  }
+  
+  /* Estilos para el formulario */
+  .example-form {
+    max-width: 500px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  /* Estilos para los campos de Material Angular */
+  .example-full-width {
+    width: 100%;
+  }
+  
+  /* Botón de aceptar */
+  button[mat-flat-button] {
+    background-color: #1976d2;
+    color: white;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 4px;
+    margin-top: 20px;
+  }
+  
+  button[mat-flat-button]:hover {
+    background-color: #1565c0;
+  }
+  
