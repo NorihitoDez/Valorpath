@@ -1,0 +1,65 @@
+/* General container styling */
+.container {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .header {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  h1 {
+    font-size: 2rem;
+    color: #333;
+    font-weight: bold;
+  }
+  
+  .table-container {
+    overflow-x: auto;
+    margin-top: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Table styling */
+  table {
+    width: 100%;
+    border-spacing: 0;
+    border-collapse: collapse;
+  }
+  
+  th, td {
+    padding: 12px;
+    text-align: left;
+  }
+  
+  th {
+    background-color: #f2f2f2;
+    color: #333;
+    font-weight: 600;
+  }
+  
+  td {
+    background-color: #ffffff;
+    color: #666;
+  }
+  
+  /* Hover effect for rows */
+  tr:hover {
+    background-color: #f9f9f9;
+  }
+  
+  /* Table header row styling */
+  .mat-header-row {
+    font-size: 1rem;
+  }
+  
+  /* Apply some spacing between columns */
+  .mat-column-c1, .mat-column-c2, .mat-column-c3, .mat-column-c4, .mat-column-c5 {
+    min-width: 150px;
+  }
+  
+  
