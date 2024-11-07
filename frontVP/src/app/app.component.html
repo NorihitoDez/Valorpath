@@ -12,7 +12,8 @@
     <button mat-button [matMenuTriggerFor]="menuUser" class="toolbar-button">
       <mat-icon class="icon-style">event</mat-icon>Eventos
     </button>
-    <button mat-button [matMenuTriggerFor]="menuUser" class="toolbar-button">
+    <!--para el foro-->
+    <button mat-button [matMenuTriggerFor]="menuForum" class="toolbar-button">
       <mat-icon class="icon-style">forum</mat-icon>Foros
     </button>
     <button mat-button [matMenuTriggerFor]="menuUser" class="toolbar-button">
@@ -47,5 +48,11 @@
     Registrar
   </button>
 </mat-menu>
+<!--para lo que es el foro-->
+<mat-menu #menuForum="matMenu">
+  <button mat-menu-item routerLink="/foros" class="menu-item">Listar foros</button>
+  <button mat-menu-item routerLink="/foros/nuevo" class="menu-item">Publicar foro</button>
+</mat-menu>
+
 
 <router-outlet></router-outlet>

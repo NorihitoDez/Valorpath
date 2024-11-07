@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
 import { ActivatedRoute, RouterOutlet } from "@angular/router";
+import { ListarforumComponent } from "./listarforum/listarforum.component";
 
 @Component({
   selector: 'app-forum',
   standalone: true,
-  imports: [RouterOutlet],
+  imports: [RouterOutlet, ListarforumComponent],
   templateUrl: './forum.component.html',
   styleUrl: './forum.component.css'
 })
