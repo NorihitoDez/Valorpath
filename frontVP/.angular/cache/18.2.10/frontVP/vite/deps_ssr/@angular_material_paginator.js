@@ -22,11 +22,11 @@ import {
   CdkScrollableModule,
   ScrollDispatcher
 } from "./chunk-3BM7BUXN.js";
-import "./chunk-BF2IJN4L.js";
 import {
   MatButtonModule,
   MatIconButton
 } from "./chunk-TY4JLIPH.js";
+import "./chunk-BF2IJN4L.js";
 import {
   A11yModule,
   AriaDescriber,
