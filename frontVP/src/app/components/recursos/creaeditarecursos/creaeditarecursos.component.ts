@@ -60,8 +60,10 @@ export class CreaeditarecursosComponent {
     });
     this.form = this.formBuild.group({
       id: [""],
-      resourcetype: ["", Validators.required],
-      resourcedescription: ["", Validators.required],
+      Autor: ["", Validators.required],
+      Titulo: ["", Validators.required],
+      Tipo: ["", Validators.required],
+      Descripcion: ["", Validators.required],
     });
   }
 
@@ -69,7 +71,7 @@ export class CreaeditarecursosComponent {
     if (this.form.valid) {
       this.recursos.id = this.form.value.id;
       this.recursos.Autor = this.form.value.Autor;
-      this.recursos.Titulo = this.form.value.Titulo;
+      this.recursos.Nombre = this.form.value.Titulo;
       this.recursos.use = this.form.value.use;
       if (this.edicion) {
         this.rs.update(this.recursos).subscribe(() => {
@@ -94,8 +96,8 @@ export class CreaeditarecursosComponent {
       this.rs.listId(this.id).subscribe((data) => {
         this.form = new FormGroup({
           id: new FormControl(data.id),
-          Titulo: new FormControl(data.Titulo),
-          Tipo: new FormControl(data.tipo),
+          Titulo: new FormControl(data.Nombre),
+          Tipo: new FormControl(data.Tipo),
           Autor: new FormControl(data.Autor),
         });
       });

@@ -11,15 +11,15 @@ import java.util.List;
 
 @Repository
 public interface IResourceRepository extends JpaRepository <Resource, Integer> {
-    @Query(value = "SELECT r.resourcetype AS recurso,COUNT(ur.id_re) AS total_usos\n" +
+    @Query(value = "SELECT r.tipo AS recurso, COUNT(ur.id_re) AS total_usos\n" +
             "FROM recursos r\n" +
             "LEFT JOIN usorecursos ur ON r.id = ur.id_re\n" +
-            "GROUP BY r.id\n" +
-            "Having COUNT(ur.id_re) = 1\n" +
-            "ORDER BY total_usos ASC",nativeQuery = true)
+            "GROUP BY r.tipo\n" +
+            "HAVING COUNT(ur.id_re) = 1\n" +
+            "ORDER BY COUNT(ur.id_re) ASC;",nativeQuery = true)
     List<String[]> Rmenosutilizado();
 
-    @Query(value = "SELECT r.resourcetype AS recurso, COUNT(ur.id_re) AS total_usos " +
+    @Query(value = "SELECT r.tipo AS recurso, COUNT(ur.id_re) AS total_usos " +
             "FROM recursos r " +
             "JOIN usorecursos ur ON r.id = ur.id_re " +
             "WHERE ur.fecha BETWEEN :fechaInicio AND :fechaFin " +
