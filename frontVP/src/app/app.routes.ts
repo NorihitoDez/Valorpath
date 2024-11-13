@@ -7,6 +7,7 @@ import { CreaeditaroleComponent } from "./components/role/creaeditarole/creaedit
 import { ForumComponent } from "./components/forum/forum.component";
 import { CreaeditaforumComponent } from "./components/forum/creaeditaforum/creaeditaforum.component";
 import { ReporteComponent } from "./components/reporte/reporte.component";
+import { MostactiveforumComponent } from "./components/reporte/mostactiveforum/mostactiveforum.component";
 
 
 export class StaticLandingComponent {}
@@ -59,5 +60,11 @@ export const routes: Routes = [
   {
     path:'reportes',
     component: ReporteComponent,
+    children:[
+      {
+        path:"mostActiveForum",
+        component:MostactiveforumComponent
+      }
+    ]
   }
 ];

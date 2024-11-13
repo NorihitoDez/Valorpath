@@ -4,6 +4,7 @@ import { Observable, Subject } from "rxjs";
 import { Forum } from "../models/Forum";
 import { HttpClient } from "@angular/common/http";
 import { QuantityForumbyPsiDTO } from "../models/QuantityForumbyPsiDTO";
+import { QuantityMostActiveForumDTO } from "../models/QuantityMostActiveForumDTO";
 
 //acceder al controlador
 const base_url = environment.base;
@@ -55,5 +56,8 @@ export class ForumService {
   }
   getquantityForumbyPsi():Observable<QuantityForumbyPsiDTO[]>{
     return this.http.get<QuantityForumbyPsiDTO[]>(`${this.url}/quantity(ForumsByPsy)`)
+  }
+  getquantityMostactiveForum():Observable<QuantityMostActiveForumDTO[]>{
+return this.http.get<QuantityMostActiveForumDTO[]>(`${this.url}/quantity(MostActiveForums)`)
   }
 }
