@@ -6,6 +6,8 @@ import { RoleComponent } from "./components/role/role.component";
 import { CreaeditaroleComponent } from "./components/role/creaeditarole/creaeditarole.component";
 import { ForumComponent } from "./components/forum/forum.component";
 import { CreaeditaforumComponent } from "./components/forum/creaeditaforum/creaeditaforum.component";
+import { ReporteComponent } from "./components/reporte/reporte.component";
+
 
 export class StaticLandingComponent {}
 
@@ -54,4 +56,8 @@ export const routes: Routes = [
       },
     ],
   },
+  {
+    path:'reportes',
+    component: ReporteComponent,
+  }
 ];

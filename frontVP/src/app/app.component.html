@@ -22,6 +22,9 @@
     <button mat-button [matMenuTriggerFor]="menuUser" class="toolbar-button">
       <mat-icon class="icon-style">edit</mat-icon>Post
     </button>
+    <button mat-button [matMenuTriggerFor]="menuReportes" class="toolbar-button" >
+      <mat-icon>insert_chart</mat-icon>Reportes
+  </button>
   </div>
   
   <div class="toolbar-right">
@@ -33,7 +36,6 @@
     </button>
   </div>
 </mat-toolbar>
-
 
 <mat-menu #menuUser="matMenu">
   <button mat-menu-item routerLink="/usuarios" class="menu-item">Listar</button>
@@ -53,6 +55,11 @@
   <button mat-menu-item routerLink="/foros" class="menu-item">Listar foros</button>
   <button mat-menu-item routerLink="/foros/nuevo" class="menu-item">Publicar foro</button>
 </mat-menu>
+<!--para los reportes-->
+<mat-menu #menuReportes="matMenu">
+  <button mat-menu-item routerLink="/reportes" class="custom-menu-item"><mat-icon> pie_chart</mat-icon>Reporte de Foros x Psicologos</button>
+ 
+</mat-menu> 
 
 
 <router-outlet></router-outlet>

@@ -1,8 +1,9 @@
 import { Injectable } from "@angular/core";
 import { environment } from "../../environments/environment";
-import { Subject } from "rxjs";
+import { Observable, Subject } from "rxjs";
 import { Forum } from "../models/Forum";
 import { HttpClient } from "@angular/common/http";
+import { QuantityForumbyPsiDTO } from "../models/QuantityForumbyPsiDTO";
 
 //acceder al controlador
 const base_url = environment.base;
@@ -51,5 +52,8 @@ export class ForumService {
   }*/
   update(forum: Forum) {
     return this.http.put(this.url,forum);
+  }
+  getquantityForumbyPsi():Observable<QuantityForumbyPsiDTO[]>{
+    return this.http.get<QuantityForumbyPsiDTO[]>(`${this.url}/quantity(ForumsByPsy)`)
   }
 }
