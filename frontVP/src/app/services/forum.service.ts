@@ -50,6 +50,6 @@ export class ForumService {
     return this.http.put(this.url, f);
   }*/
   update(forum: Forum) {
-    return this.http.put(`${this.url}/update/${forum.id}`, forum);
+    return this.http.put(this.url,forum);
   }
 }

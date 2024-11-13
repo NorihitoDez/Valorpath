@@ -42,16 +42,10 @@ export class ListarforumComponent implements OnInit {
       this.dataSource.data = data;
     });
   }
-  // Método para cargar la lista de foros
-  cargarForos() {
-    this.fS.list().subscribe((data) => {
-      this.dataSource = new MatTableDataSource(data);
-      this.dataSource.paginator = this.paginator;
-    });
-  }
+
 
   eliminar(id: number) {
-    console.log("Eliminando foro con ID:", id); // Verifica el ID
+    
     if (confirm("¿Estás seguro de que quieres eliminar este foro?")) {
       this.fS
         .delete(id)
@@ -70,13 +64,21 @@ export class ListarforumComponent implements OnInit {
             this.cargarForos();
           }
         });
+        console.log("Eliminando foro con ID:", id); // Verifica el ID
     }
      // Redirige a la lista de foros
      this.router.navigate(["foros"]);
   }
   editar(id: number) {
-    this.router.navigate(["/creaeditaforum", id]); // Redirigir al componente de edición
+    this.router.navigate(["creaeditaforum", id]); // Redirigir al componente de edición
   }
+    // Método para cargar la lista de foros
+    cargarForos() {
+      this.fS.list().subscribe((data) => {
+        this.dataSource = new MatTableDataSource(data);
+        this.dataSource.paginator = this.paginator;
+      });
+    }
   // Función para ocultar el mensaje de error después de 3 segundos
   ocultarMensaje() {
     setTimeout(() => {
