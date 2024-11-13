@@ -25,7 +25,7 @@ public class ForumController {
         fS.insert(forum);
     }
 
-    @PutMapping("/actualizar")
+    @PutMapping
     //@PreAuthorize("hasAnyAuthority('PSICOLOGO')")
     public void modificar(@RequestBody ForumDTO forumDTO) {
         ModelMapper m = new ModelMapper();
@@ -33,7 +33,7 @@ public class ForumController {
         fS.update(forum);
     }
 
-    @GetMapping("/listar")
+    @GetMapping
     //@PreAuthorize("hasAnyAuthority('PSICOLOGO')")
     public List<ForumDTO> listar() {
         return fS.list().stream().map(y -> {
@@ -42,7 +42,7 @@ public class ForumController {
         }).collect(Collectors.toList());
     }
 
-    @DeleteMapping("/eliminar/{id}")
+    @DeleteMapping("{id}")
     //@PreAuthorize("hasAnyAuthority('PSICOLOGO')")
     public void eliminar(@PathVariable("id") Integer id) {
         fS.delete(id);
