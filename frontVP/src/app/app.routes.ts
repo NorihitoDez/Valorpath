@@ -47,6 +47,11 @@ export const routes: Routes = [
         path: "nuevo",
         component: CreaeditaforumComponent,
       },
+      // Ruta de edición de foros
+      {
+        path: "ediciones/:id",
+        component: CreaeditaforumComponent, // Asegúrate de que la ruta esté bien configurada
+      },
     ],
   },
 ];
