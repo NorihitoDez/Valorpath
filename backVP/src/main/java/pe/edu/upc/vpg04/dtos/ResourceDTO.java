@@ -1,33 +1,54 @@
 package pe.edu.upc.vpg04.dtos;
 
+import pe.edu.upc.vpg04.entities.Users;
+
 public class ResourceDTO {
 
-    private int id;
-    private String resourcetype;
-    private String resourcedescription;
+    private int idrecurso;
+    private String Autor;
+    private String Tipo;
+    private String nombre;
+    private String descripcion;
 
     public int getId() {
-        return id;
+        return idrecurso;
     }
 
     public void setId(int id) {
-        this.id = id;
+        this.idrecurso = id;
     }
 
-    public String getResourcetype() {
-        return resourcetype;
+    public String getAutor() {
+        return Autor;
     }
 
-    public void setResourcetype(String resourcetype) {
-        this.resourcetype = resourcetype;
+    public void setAutor(String autor) {
+        Autor = autor;
     }
 
-    public String getResourcedescription() {
-        return resourcedescription;
+    public String getTipo() {
+        return Tipo;
     }
 
-    public void setResourcedescription(String resourcedescription) {
-        this.resourcedescription = resourcedescription;
+    public void setTipo(String tipo) {
+        Tipo = tipo;
     }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public String getDescripcion() {
+        return descripcion;
+    }
+
+    public void setDescripcion(String descripcion) {
+        this.descripcion = descripcion;
+    }
+
 
 }

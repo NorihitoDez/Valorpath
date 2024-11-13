@@ -13,6 +13,5 @@ public interface IResourceService {
     public void update (Resource resour);
     public Resource listId (int id);
     public void delete (int id);
-    List<String[]> Rmenosutilizado();
-    List<String[]> tiporecursomasutilizad(LocalDate fechaInicio, LocalDate fechaFin);
+
 }

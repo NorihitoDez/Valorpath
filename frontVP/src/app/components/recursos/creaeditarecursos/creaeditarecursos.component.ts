@@ -16,6 +16,8 @@ import { MatDatepickerModule } from "@angular/material/datepicker";
 import { MatNativeDateModule } from "@angular/material/core";
 import { recursos } from "../../../models/recursos";
 import { RecursosService } from "../../../services/recursos.service";
+import { User } from "../../../models/user";
+import { UserService } from "../../../services/user.service";
 
 @Component({
   selector: "app-creaeditarecursos",
@@ -38,6 +40,7 @@ import { RecursosService } from "../../../services/recursos.service";
 export class CreaeditarecursosComponent {
   form: FormGroup = new FormGroup({});
   recursos: recursos = new recursos();
+  usus:User=new User();
   mensaje: string = "";
   id: number = 0;
   edicion: boolean = false;
@@ -45,9 +48,16 @@ export class CreaeditarecursosComponent {
     { value: true, viewValue: "Enabled" },
     { value: false, viewValue: "Disabled" },
   ];
+  usuarios:User[]=[]
+  Tipos  = [
+    {value: 'Texto', viewValue: 'Texto'},
+    {value: 'Video', viewValue: 'Video'},
+    {value: 'Audio', viewValue: 'Audio'},
+  ];
   constructor(
     private formBuild: FormBuilder,
     private rs: RecursosService,
+    private us: UserService,
     private router: Router,
     private route: ActivatedRoute
   ) {}
@@ -56,51 +66,48 @@ export class CreaeditarecursosComponent {
     this.route.params.subscribe((data: Params) => {
       this.id = data["id"];
       this.edicion = data["id"] != null;
-      this.init();
     });
     this.form = this.formBuild.group({
-      id: [""],
-      Autor: ["", Validators.required],
-      Titulo: ["", Validators.required],
-      Tipo: ["", Validators.required],
-      Descripcion: ["", Validators.required],
+      Autor: ['', Validators.required],
+      Nombre: ['', Validators.required],
+      Tipo: ['', Validators.required],
+      Descripcion: ["", [Validators.required,Validators.minLength(10)]],
+      Id:['',Validators.required]
+
+    });
+    this.us.list().subscribe((data) => {
+      this.usuarios = data;
     });
   }
 
   aceptar(): void {
+    console.log("Formulario:", this.form.value);  // Imprimir valores del formulario
+  console.log("Validez:", this.form.valid);
     if (this.form.valid) {
-      this.recursos.id = this.form.value.id;
       this.recursos.Autor = this.form.value.Autor;
-      this.recursos.Nombre = this.form.value.Titulo;
-      this.recursos.use = this.form.value.use;
+      this.recursos.Nombre = this.form.value.Nombre;
+      this.recursos.Tipo=this.form.value.Tipo;
+      this.recursos.Descripcion=this.form.value.Descripcion;
+      this.recursos.use.id = this.form.value.Id;
       if (this.edicion) {
+        console.log('Datos a actualizar:', this.recursos);
         this.rs.update(this.recursos).subscribe(() => {
           this.rs.list().subscribe((data) => {
             this.rs.setList(data);
           });
         });
       } else {
+        console.log('Datos a insertar:', this.recursos);
         this.rs.insert(this.recursos).subscribe((data) => {
           this.rs.list().subscribe((data) => {
             this.rs.setList(data);
           });
         });
+        
       }
       this.router.navigate(["recursos"]);
     } else {
       this.mensaje = "Complete todos los campos, revise!!";
-    }
-  }
-  init() {
-    if (this.edicion) {
-      this.rs.listId(this.id).subscribe((data) => {
-        this.form = new FormGroup({
-          id: new FormControl(data.id),
-          Titulo: new FormControl(data.Nombre),
-          Tipo: new FormControl(data.Tipo),
-          Autor: new FormControl(data.Autor),
-        });
-      });
     }
   }
 }

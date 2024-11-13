@@ -40,14 +40,6 @@ public class ResorceServiceImplement implements IResourceService {
         rR.deleteById(id);
     }
 
-    @Override
-    public List<String[]> Rmenosutilizado() {
-        return rR.Rmenosutilizado();
-    }
 
-    @Override
-    public List<String[]> tiporecursomasutilizad(LocalDate fechaInicio, LocalDate fechaFin) {
-        return rR.tiporecursomasutilizado(fechaInicio, fechaFin);
-    }
 
 }

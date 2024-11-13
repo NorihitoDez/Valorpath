@@ -62,34 +62,7 @@ public class ResourceController {
         ResourceDTO resourceDTO = m.map(rS.listId(id), ResourceDTO.class);
         return resourceDTO;
     }
-    @GetMapping("/menosutilizado")
-    //@PreAuthorize("hasAnyAuthority('PSICOLOGO')")
-    public List<LessUsedResourceDTO> Recursomenosutilizado()
-    {
-        List<String[]> lista=rS.Rmenosutilizado();
-        List<LessUsedResourceDTO> listdto=new ArrayList<>();
-        for(String[] column:lista)
-        {
-            LessUsedResourceDTO dto=new LessUsedResourceDTO();
-            dto.setTiporecurso(column[0]);
-            dto.setTotalusos(Integer.parseInt(column[1]));
-            listdto.add(dto);
-        }
-        return listdto;
-    }
-    @GetMapping("/maasutilizadoportiempo")
-    //@PreAuthorize("hasAnyAuthority('PSICOLOGO')")
-    public List<MostUsebetweendateDTO> recursomasutilizadoportiempo(@RequestParam LocalDate fechainicio, @RequestParam LocalDate fechafin) {
-        List<String[]> lista = rS.tiporecursomasutilizad(fechainicio, fechafin);
-        List<MostUsebetweendateDTO> listadto = new ArrayList<>();
-        for (String[] columna : lista) {
-            MostUsebetweendateDTO dto = new MostUsebetweendateDTO();
-            dto.setTiporecurso(columna[0]);
-            dto.setTotalusos(Integer.parseInt(columna[1]));
-            listadto.add(dto);
-        }
-        return listadto;
-    }
+
 
 
 }

@@ -9,38 +9,64 @@
   
       <mat-form-field class="example-full-width">
         <mat-label>Titulo</mat-label>
-        <input matInput placeholder="Nombre" formControlName="nombre" />
-        <mat-error *ngIf="form.get('Titulo')?.hasError('required')">
-          El Titulo es obligatorio.
+        <input matInput placeholder="Nombre" formControlName="Nombre" />
+        <mat-error *ngIf="form.get('Nombre')?.hasError('required')">
+          El Nombre es obligatorio.
         </mat-error>
       </mat-form-field>
   
       <mat-form-field class="example-full-width">
         <mat-label>Autor</mat-label>
-        <input matInput placeholder="Apellidos" formControlName="apellidos" />
+        <input matInput placeholder="Autor" formControlName="Autor" />
         <mat-error *ngIf="form.get('Autor')?.hasError('required')">
           El nombre del autor es obligatorios.
         </mat-error>
       </mat-form-field>
-  
-      <mat-form-field class="example-full-width">
+      
+      <!--<mat-form-field>
         <mat-label>Tipo</mat-label>
-        <input matInput placeholder="Email" formControlName="correo" />
+        <mat-select>
+          @for (tipo of Tipos; track tipo) {
+            <mat-option [value]="tipo.value">{{tipo.viewValue}}</mat-option>
+          }
+        </mat-select>
         <mat-error *ngIf="form.get('tipo')?.hasError('required')">
-          El email es obligatorio.
+          El Tipo es obligatorio.
+        </mat-error>
+      </mat-form-field>-->
+      <mat-form-field>
+        <mat-label>Tipo</mat-label>
+        <mat-select formControlName="Tipo" required>
+          <mat-option *ngFor="let tipo of Tipos" [value]="tipo">{{ tipo.value }}</mat-option>
+        </mat-select>
+        <mat-error *ngIf="form.get('Tipo')?.hasError('required')">
+          Seleccione un tipo de recurso
+        </mat-error>
+      </mat-form-field>
+
+      <mat-form-field>
+        <mat-label>Id</mat-label>
+        <mat-select  formControlName="Id">
+          @for (m of usuarios; track m) {
+          <mat-option [value]="m.id">{{ m.username }}</mat-option>
+          }
+        </mat-select>
+      </mat-form-field>
+
+      
+      <mat-form-field>
+        <mat-label>Descripción</mat-label>
+        <textarea matInput formControlName="Descripcion" required></textarea>
+        <mat-error *ngIf="form.get('Descripcion')?.hasError('required')">
+          La descripción es obligatoria
+        </mat-error>
+        <mat-error *ngIf="form.get('Descripcion')?.hasError('minlength')">
+          La descripción debe tener al menos 5 caracteres
         </mat-error>
       </mat-form-field>
    
-      <div class="button-container">
-        <button mat-raised-button color="primary">Aceptar</button>
-        <button
-          mat-raised-button
-          color="warn"
-          routerLink="/usuarios"
-          class="cancel"
-        >
-          Cancelar
-        </button>
+      <div>
+        <button mat-flat-button class="custom-button">Aceptar</button>
       </div>
   
       <p>{{ mensaje }}</p>

@@ -8,7 +8,7 @@ public class Resource {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+    private int idrecurso;
     @Column(name = "autor", length = 50, nullable = false)
     private String Autor;
     @Column(name = "tipo", length = 400, nullable = false)
@@ -17,28 +17,24 @@ public class Resource {
     private String nombre;
     @Column(name = "descripcion", length = 400, nullable = false)
     private String descripcion;
-    @ManyToOne
-    @JoinColumn(name = "idUsers")
-    private Users use;
 
     public Resource() {
     }
 
-    public Resource(int id, String autor, String tipo, String nombre, String descripcion, Users use) {
-        this.id = id;
+    public Resource(int idrecurso, String autor, String tipo, String nombre, String descripcion, Users use) {
+        this.idrecurso = idrecurso;
         Autor = autor;
         Tipo = tipo;
         this.nombre = nombre;
         this.descripcion = descripcion;
-        this.use = use;
     }
 
-    public int getId() {
-        return id;
+    public int getIdrecurso() {
+        return idrecurso;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public void setIdrecurso(int idrecurso) {
+        this.idrecurso = idrecurso;
     }
 
     public String getAutor() {
@@ -73,13 +69,7 @@ public class Resource {
         this.descripcion = descripcion;
     }
 
-    public Users getUse() {
-        return use;
-    }
 
-    public void setUse(Users use) {
-        this.use = use;
-    }
 }
 
 

@@ -28,14 +28,10 @@ export class ListarecursosComponent implements OnInit {
   ngOnInit(): void {
     this.rs.list().subscribe((data) => {
       this.datos = data;
-      console.log(this.datos);  
     });
     // this.rs.getList().subscribe((data=>{
     //   this.datasource=new MatTableDataSource(data);
     // }));
-    this.rs.getList().subscribe((data) => {
-      this.datos = data;
-    });
   }
   eliminar(id: number) {
     this.rs.delete(id).subscribe((data) => {
