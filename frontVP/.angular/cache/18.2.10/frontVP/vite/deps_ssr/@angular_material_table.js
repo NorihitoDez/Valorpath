@@ -8,16 +8,16 @@ import {
   _VIEW_REPEATER_STRATEGY,
   _ViewRepeaterOperation,
   isDataSource
-} from "./chunk-3BM7BUXN.js";
+} from "./chunk-J6JC4UOC.js";
 import {
   Directionality,
   MatCommonModule,
   Platform,
   _isNumberValue
-} from "./chunk-MVASYTF6.js";
+} from "./chunk-6MX3EHNH.js";
 import {
   DOCUMENT
-} from "./chunk-DQZ2PILJ.js";
+} from "./chunk-2QQZGJNY.js";
 import {
   Attribute,
   ChangeDetectionStrategy,
@@ -46,7 +46,6 @@ import {
   afterNextRender,
   booleanAttribute,
   inject,
-  require_operators,
   setClassMetadata,
   ɵɵInheritDefinitionFeature,
   ɵɵInputTransformsFeature,
@@ -81,10 +80,14 @@ import {
   ɵɵtext,
   ɵɵtextInterpolate1,
   ɵɵviewQuery
-} from "./chunk-TKQWSO4T.js";
+} from "./chunk-D4D77QEN.js";
+import {
+  require_operators
+} from "./chunk-UOPINYA3.js";
 import {
   require_cjs
-} from "./chunk-2H3L6IVL.js";
+} from "./chunk-5IW5ZEPE.js";
+import "./chunk-RPWZ4CMX.js";
 import {
   __toESM
 } from "./chunk-NQ4HTGF6.js";

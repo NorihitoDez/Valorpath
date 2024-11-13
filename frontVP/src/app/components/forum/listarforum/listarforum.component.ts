@@ -23,7 +23,9 @@ export class ListarforumComponent implements OnInit {
       this.dataSource = new MatTableDataSource(data);
     });
     this.fS.getlist().subscribe((data)=>{
-      this.dataSource = new MatTableDataSource(data);
+      /*this.dataSource = new MatTableDataSource(data);
+      this.dataSource.paginator = this.paginator; // Configura el paginador aquí*/
+      this.dataSource.data=data;
     })
   }
    // Configurar el paginador en AfterViewInit

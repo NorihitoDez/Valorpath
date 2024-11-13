@@ -1,32 +1,37 @@
-<div class="container" style="text-align: center;margin:5%">
-    <div><h1>Registra un Foro</h1></div>
-    <div class="error-message">
-      {{ errorMessage }}
-    </div>
-    <div>
-      <form class="example-form" [formGroup]="form" (submit)="aceptar()">
+<div class="container" style="text-align: center; margin: 5%">
+  <div><h1>Registra un Foro</h1></div>
+  <div class="error-message">
+    {{ errorMessage }}
+  </div>
+  <div>
+    <form class="example-form" [formGroup]="form" (submit)="aceptar()">
       <div>
         <!--para el titulo del foro-->
         <mat-form-field class="example-full-width">
           <mat-label>Título</mat-label>
           <input matInput formControlName="htitulo" />
-         <!-- <mat-error *ngIf="form.get('htitulo')?.touched">
+          <!-- <mat-error *ngIf="form.get('htitulo')?.touched">
               {{ getErrorMessage('htitulo') }}
             </mat-error>-->
         </mat-form-field>
         <!--para la fecha del foro -->
         <br />
-  
+
         <mat-form-field>
           <mat-label>Seleccione una fecha</mat-label>
-          <input matInput [matDatepicker]="picker" formControlName="hfecha" [min]="today" />
+          <input
+            matInput
+            [matDatepicker]="picker"
+            formControlName="hfecha"
+            [min]="today"
+          />
           <mat-hint>dd/mm/yyyy</mat-hint>
           <mat-datepicker-toggle
             matIconSuffix
             [for]="picker"
           ></mat-datepicker-toggle>
           <mat-datepicker #picker></mat-datepicker>
-         <!-- <mat-error *ngIf="form.get('hfecha')?.touched">
+          <!-- <mat-error *ngIf="form.get('hfecha')?.touched">
               {{ getErrorMessage('hfecha') }}
             </mat-error>-->
         </mat-form-field>
@@ -36,27 +41,25 @@
         <mat-form-field class="example-full-width">
           <mat-label>Descripción del foro</mat-label>
           <input matInput formControlName="hdescripccion" />
-         <!-- <mat-error *ngIf="form.get('hdescripccion')?.touched">
+          <!-- <mat-error *ngIf="form.get('hdescripccion')?.touched">
               {{ getErrorMessage('hdescripccion') }}
             </mat-error>-->
         </mat-form-field>
         <!--para los usuarios-->
         <mat-form-field>
           <mat-label>Psicólogo</mat-label>
-          <mat-select  formControlName="hpsicologo">
-            @for (f of listaUsuarios; track f) {
-            <mat-option [value]="f.id">{{ f.username }}</mat-option>
-            }
+          <mat-select formControlName="hpsicologo">
+            <mat-option *ngFor="let f of listaUsuarios" [value]="f.id">
+              {{ f.username }}
+            </mat-option>
           </mat-select>
         </mat-form-field>
-        <br>        
+        <br />
         <!--para seleccionar el boton aceptar  -->
         <div>
-          <button mat-flat-button>Aceptar</button>
+          <button mat-flat-button type="submit">Aceptar</button>
         </div>
-     
       </div>
-  </form>
-    </div>
+    </form>
   </div>
-  
+</div>
