@@ -1,0 +1,46 @@
+<div>
+  <div><h1>Registrar Mantenimientos</h1></div>
+  <div>
+    <div class="container">
+      <div class="example-form">
+        <form class="example-form" [formGroup]="form" (ngSubmit)="aceptar()">
+          <mat-form-field class="example-full-width" *ngIf="edicion">
+            <mat-label>Código</mat-label>
+            <input matInput formControlName="hcodigo" />
+          </mat-form-field>
+
+<br>
+
+          <mat-form-field>
+            <mat-label>Lista de Roles</mat-label>
+            <mat-select formControlName="hrole">
+              <mat-option *ngFor="let m of listaRoles" [value]="m.value">
+                {{ m.viewValue }}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+
+<br>
+
+          <mat-form-field>
+            <mat-label>Lista de Usuarios</mat-label>
+            <mat-select formControlName="husuarios">
+              <mat-option *ngFor="let m of listaUsuarios" [value]="m.id">
+                {{ m.username }}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+
+<br>
+
+          <div class="button-container">
+            <button mat-raised-button color="primary" type="submit">Aceptar</button>
+            <button mat-raised-button color="warn" routerLink="/roles" class="cancel">
+              Cancelar
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

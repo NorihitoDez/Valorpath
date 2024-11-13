@@ -1,9 +1,63 @@
-<mat-toolbar color="primary">  
-  <button mat-button [matMenuTriggerFor]="menuUser"><mat-icon>person</mat-icon>Usuarios</button>
+<mat-toolbar class="custom-toolbar">
+  <div class="toolbar-left">
+
+    <button mat-button class="toolbar-button logo-button">
+      <img src="assets/images/logo.png" alt="Logo" class="logo-image">
+    </button>
+
+    <button mat-button [matMenuTriggerFor]="menuUser" class="toolbar-button">
+      <mat-icon class="icon-style">person</mat-icon>Usuarios
+    </button>
+    <button mat-button [matMenuTriggerFor]="menuRole" class="toolbar-button">
+      <mat-icon class="icon-style">assignment</mat-icon>Roles
+    </button>
+    <button mat-button [matMenuTriggerFor]="menuUser" class="toolbar-button">
+      <mat-icon class="icon-style">healing</mat-icon>Citas
+    </button>
+    <button mat-button [matMenuTriggerFor]="menuEvent" class="toolbar-button">
+      <mat-icon class="icon-style">event</mat-icon>Eventos
+    </button>
+    <button mat-button [matMenuTriggerFor]="menuUser" class="toolbar-button">
+      <mat-icon class="icon-style">forum</mat-icon>Foros
+    </button>
+    <button mat-button [matMenuTriggerFor]="menuUser" class="toolbar-button">
+      <mat-icon class="icon-style">library_books</mat-icon>Recursos
+    </button>
+    <button mat-button [matMenuTriggerFor]="menuUser" class="toolbar-button">
+      <mat-icon class="icon-style">edit</mat-icon>Post
+    </button>
+  </div>
+  
+  <div class="toolbar-right">
+    <button mat-button [matMenuTriggerFor]="menuUser" class="toolbar-button">
+      <mat-icon class="icon-style">person</mat-icon>Perfil
+    </button>
+    <button mat-button [matMenuTriggerFor]="menuUser" class="toolbar-button">
+      <mat-icon class="icon-style">exit_to_app</mat-icon>Cerrar Sesión
+    </button>
+  </div>
 </mat-toolbar>
 
+
 <mat-menu #menuUser="matMenu">
-  <button mat-menu-item routerLink="/usuarios">Listar</button>
-  <button mat-menu-item routerLink="/usuarios/nuevo">Registrar</button>
+  <button mat-menu-item routerLink="/usuarios" class="menu-item">Listar</button>
+  <button mat-menu-item routerLink="/usuarios/nuevo" class="menu-item">
+    Registrar
+  </button>
 </mat-menu>
+
+<mat-menu #menuRole="matMenu">
+  <button mat-menu-item routerLink="/roles" class="menu-item">Listar</button>
+  <button mat-menu-item routerLink="/roles/nuevo" class="menu-item">
+    Registrar
+  </button>
+</mat-menu>
+
+<mat-menu #menuEvent="matMenu">
+  <button mat-menu-item routerLink="/eventos" class="menu-item">Listar</button>
+  <button mat-menu-item routerLink="/eventos/nuevo" class="menu-item">
+    Registrar
+  </button>
+</mat-menu>
+
 <router-outlet></router-outlet>

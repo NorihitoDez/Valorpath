@@ -1,0 +1,36 @@
+.custom-toolbar {
+    background-color: #ffffff; /* Fondo blanco */
+    color: #FFD700; /* Color dorado para los íconos y el texto */
+    font-family: 'Roboto', sans-serif;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: space-between; /* Espacio entre los elementos */
+    align-items: center;
+  }
+  
+  .toolbar-left {
+    display: flex;
+    gap: 15px; /* Espaciado entre los botones del lado izquierdo */
+  }
+  
+  .toolbar-right {
+    display: flex;
+    gap: 10px; /* Espaciado entre los botones de perfil y cerrar sesión */
+    margin-left: auto; /* Alinea los elementos a la derecha */
+  }
+  
+  .toolbar-button {
+    color: #FFD700;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  .toolbar-button:hover {
+    background-color: #FFD700; /* Fondo amarillo al pasar el mouse */
+    color: #000; /* Texto negro para mantener la legibilidad */
+  }
+
+  .logo-image {
+    height: 40px; /* Ajusta el tamaño según lo desees */
+    max-width: 100%;
+  }
+  
