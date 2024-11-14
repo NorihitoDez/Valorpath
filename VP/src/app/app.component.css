@@ -1,0 +1,11 @@
+.custom-toolbar {
+  background-color: hsl(4, 97%, 48%);
+  color: white;
+}
+
+.custom-menu-item {
+  color: black;
+  &:hover {
+    color: hsl(4, 97%, 48%);
+  }
+}

@@ -1,0 +1,63 @@
+<div class="container">
+  <h2>Registro de Roles</h2>
+  <form class="example-form" [formGroup]="form" (ngSubmit)="aceptar()">
+    <mat-form-field class="example-full-width" *ngIf="edicion">
+      <mat-label>Código</mat-label>
+      <input
+        matInput
+        placeholder="Id"
+        formControlName="codigo"
+        readonly
+      />
+    </mat-form-field>
+
+    <br />
+
+    <mat-form-field class="example-full-width">
+      <mat-label>Roles</mat-label>
+      <mat-select formControlName="roles">
+        <mat-option *ngFor="let rol of tiposRoles" [value]="rol.value">
+          {{ rol.viewValue }}
+        </mat-option>
+      </mat-select>
+      <mat-error
+        *ngIf="obtenerControlCampo('roles')?.errors?.['required']"
+      >
+        Elegir el rol es obligatorio.
+      </mat-error>
+    </mat-form-field>
+
+    <br />
+    <mat-form-field class="example-full-width">
+      <mat-label>Usuarios</mat-label>
+      <mat-select
+        [(value)]="idUserSeleccionado"
+        formControlName="usuarios"
+      >
+        <mat-option *ngFor="let user of listaUsers" [value]="user">
+          {{ user.username }}
+        </mat-option>
+      </mat-select>
+      <mat-error
+        *ngIf="obtenerControlCampo('usuarios')?.errors?.['required']"
+      >
+        Elegir el usuario para asignarle el rol es obligatorio.
+      </mat-error>
+    </mat-form-field>
+    <br />
+
+    <div class="button-container">
+      <button mat-raised-button color="primary" type="submit">
+        Aceptar
+      </button>
+      <button
+        mat-raised-button
+        color="warn"
+        routerLink="/roles"
+        class="cancel"
+      >
+        Cancelar
+      </button>
+    </div>
+  </form>
+</div>

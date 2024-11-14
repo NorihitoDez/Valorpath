@@ -1,0 +1,74 @@
+<div>
+  <div class="container">
+    <br />
+    <h2 style="text-align: center">Lista de Citas Medicas</h2>
+    <div style="text-align: right">
+      <button mat-raised-button color="primary" routerLink="/citas/nuevo">
+        Nuevo
+      </button>
+    </div>
+    <table mat-table [dataSource]="dataSource">
+      <ng-container matColumnDef="codigo">
+        <th mat-header-cell *matHeaderCellDef>Codigo</th>
+        <td mat-cell *matCellDef="let element">{{ element.id }}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="nombre">
+        <th mat-header-cell *matHeaderCellDef>Nombre</th>
+        <td mat-cell *matCellDef="let element">{{ element.name }}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="fecha">
+        <th mat-header-cell *matHeaderCellDef>Fecha</th>
+        <td mat-cell *matCellDef="let element">{{ element.date }}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="estado">
+        <th mat-header-cell *matHeaderCellDef>Estatus</th>
+        <td mat-cell *matCellDef="let element">{{ element.status }}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="veterano">
+        <th mat-header-cell *matHeaderCellDef>Veteranos</th>
+        <td mat-cell *matCellDef="let element">
+          {{ element.veteran.username }}
+        </td>
+      </ng-container>
+
+      <ng-container matColumnDef="psicologo">
+        <th mat-header-cell *matHeaderCellDef>Psicologos</th>
+        <td mat-cell *matCellDef="let element">
+          {{ element.psychologist.username }}
+        </td>
+      </ng-container>
+
+      <ng-container matColumnDef="eliminar">
+        <th mat-header-cell *matHeaderCellDef>Eliminar</th>
+        <td mat-cell *matCellDef="let element" (click)="eliminar(element.id)">
+          <mat-icon style="color: #0000f5">delete</mat-icon>
+        </td>
+      </ng-container>
+
+      <ng-container matColumnDef="actualizar">
+        <th mat-header-cell *matHeaderCellDef>Actualizar</th>
+        <td
+          mat-cell
+          *matCellDef="let element"
+          [routerLink]="['ediciones', element.id]"
+        >
+          <mat-icon style="color: #48752c">edit</mat-icon>
+        </td>
+      </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+    </table>
+
+    <mat-paginator
+      [pageSizeOptions]="[5, 10, 16]"
+      showFirstLastButtons
+      aria-label="Select page of periodic elements"
+    >
+    </mat-paginator>
+  </div>
+</div>

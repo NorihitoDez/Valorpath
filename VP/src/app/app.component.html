@@ -1,0 +1,67 @@
+<mat-toolbar color="primary">
+  <button mat-button [matMenuTriggerFor]="menuUser">
+    <mat-icon>person</mat-icon>Usuarios
+  </button>
+  <button mat-button [matMenuTriggerFor]="menuRole">
+    <mat-icon>assignment</mat-icon>Roles
+  </button>
+  <button mat-button [matMenuTriggerFor]="menuAppointment">
+    <mat-icon>local_hospital</mat-icon>Citas Medicas
+  </button>
+  <button mat-button [matMenuTriggerFor]="menuForum" >
+    <mat-icon>forum</mat-icon>Foros
+  </button>
+  <button mat-button [matMenuTriggerFor]="menuPost" style="color: rgb(247, 247, 247)">
+    <mat-icon>post</mat-icon>Publicaciones
+  </button>
+  <button mat-button [matMenuTriggerFor]="menuRecursos" style="color: rgb(247, 247, 247)">
+    <mat-icon>post</mat-icon>Recursos
+  </button>
+  <button mat-button [matMenuTriggerFor]="menuReportes" style="color: rgb(247, 247, 247)">
+    <mat-icon>insert_chart</mat-icon>Reportes
+</button>
+</mat-toolbar>
+
+<mat-menu #menuUser="matMenu">
+  <button mat-menu-item routerLink="/usuarios">Listar</button>
+  <button mat-menu-item routerLink="/usuarios/nuevo">Registrar</button>
+</mat-menu>
+<mat-menu #menuRole="matMenu">
+  <button mat-menu-item routerLink="/roles" class="menu-item">Listar</button>
+  <button mat-menu-item routerLink="/roles/nuevo" class="menu-item">
+    Registrar
+  </button>
+</mat-menu>
+<mat-menu #menuAppointment="matMenu">
+  <button mat-menu-item routerLink="/citas">Listar</button>
+  <button mat-menu-item routerLink="/citas/nuevo">Registrar</button>
+</mat-menu>
+<mat-menu #menuForum="matMenu">
+  <button mat-menu-item routerLink="/foros" class="menu-item">
+    Listar
+  </button>
+
+  <button mat-menu-item routerLink="/foros/nuevo" class="menu-item">
+    Publicar
+  </button>
+</mat-menu>
+<mat-menu #menuRecursos="matMenu">
+  <button mat-menu-item routerLink="/recursos">Listar</button>
+  <button mat-menu-item routerLink="/recursos/nuevo">Registrar</button>
+  <button mat-menu-item routerLink="/usorecurso">Listar Usos</button>
+</mat-menu>
+<mat-menu #menuPost="matMenu">
+  <button mat-menu-item routerLink="/publicaciones" class="menu-item">
+    Listar
+  </button>
+  <button mat-menu-item routerLink="/publicaciones/nuevo" class="menu-item">
+    Publicar
+  </button>
+</mat-menu>
+<mat-menu #menuReportes="matMenu">
+  <button mat-menu-item routerLink="/reportes" class="custom-menu-item">
+    <mat-icon>pie_chart</mat-icon>Reporte Cantidad de Citas</button>
+    <button mat-menu-item routerLink="/reportes/cantidad" class="custom-menu-item">
+      <mat-icon> bar_chart</mat-icon>Reporte de la Cantidad de Post</button>
+</mat-menu>
+<router-outlet></router-outlet>

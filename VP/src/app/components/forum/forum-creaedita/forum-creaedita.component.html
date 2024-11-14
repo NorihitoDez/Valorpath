@@ -1,0 +1,70 @@
+<div class="container">
+    <h2>Registro de Foros</h2>
+    <form [formGroup]="form" (submit)="aceptar()">
+      <mat-form-field class="example-full-width" *ngIf="edicion">
+        <mat-label>Código</mat-label>
+        <input matInput placeholder="Codigo" formControlName="codigo" readonly/>
+      </mat-form-field>
+  
+      <mat-form-field class="example-full-width">
+        <mat-label>Titulo</mat-label>
+        <input matInput placeholder="Titulo" formControlName="titulo" />
+        <mat-error *ngIf="form.get('titulo')?.hasError('required')">
+          El titulo es obligatorio.
+        </mat-error>
+      </mat-form-field>
+  
+      <mat-form-field class="example-full-width">
+        <mat-label>Fecha</mat-label>
+        <input
+          matInput
+          [matDatepicker]="picker"
+          formControlName="fecha"
+          placeholder="MM/DD/YYYY"
+          [min]="fechaminima"
+        />
+        <mat-datepicker-toggle
+          matIconSuffix
+          [for]="picker"
+        ></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+        <mat-error *ngIf="form.get('fecha')?.hasError('required')">
+          La fecha  es obligatoria.
+        </mat-error>
+      </mat-form-field>
+
+      <mat-form-field class="example-full-width">
+        <mat-label>Descripcion</mat-label>
+        <textarea
+          matInput
+          placeholder="Descripcion"
+          formControlName="descripcion"
+        ></textarea>
+        <mat-error *ngIf="form.get('titulo')?.hasError('required')">
+           La descripcion es obligatorio.
+          </mat-error>
+      </mat-form-field>
+
+      <mat-form-field class="example-full-width">
+        <mat-label>Usuario Psicólogo</mat-label>
+        <mat-select formControlName="usuario">
+          <mat-option *ngFor="let u of listaUsuariosPsicologos" [value]="u">
+            {{ u.username }}
+          </mat-option>
+        </mat-select>
+        <mat-error *ngIf="form.get('usuario')?.hasError('required')">
+          Es obligatorio.
+        </mat-error>
+      </mat-form-field>
+  
+      <div class="button-container">
+        <button mat-raised-button color="primary" type="submit">Aceptar</button>
+        <button mat-raised-button color="warn" routerLink="/citas" class="cancel">
+          Cancelar
+        </button>
+      </div>
+  
+      <p>{{ mensaje }}</p>
+    </form>
+  </div>
+  
