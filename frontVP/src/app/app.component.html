@@ -11,13 +11,13 @@
     <button mat-button [matMenuTriggerFor]="menuRole" class="toolbar-button">
       <mat-icon class="icon-style">assignment</mat-icon>Roles
     </button>
-    <button mat-button [matMenuTriggerFor]="menuUser" class="toolbar-button">
+    <button mat-button [matMenuTriggerFor]="menuCitas" class="toolbar-button">
       <mat-icon class="icon-style">healing</mat-icon>Citas
     </button>
-    <button mat-button [matMenuTriggerFor]="menuUser" class="toolbar-button">
+    <button mat-button [matMenuTriggerFor]="menuEvent" class="toolbar-button">
       <mat-icon class="icon-style">event</mat-icon>Eventos
     </button>
-    <button mat-button [matMenuTriggerFor]="menuUser" class="toolbar-button">
+    <button mat-button [matMenuTriggerFor]="menuForos" class="toolbar-button">
       <mat-icon class="icon-style">forum</mat-icon>Foros
     </button>
     <button mat-button [matMenuTriggerFor]="menuUser" class="toolbar-button">
@@ -29,9 +29,6 @@
   </div>
   
   <div class="toolbar-right">
-    <button mat-button [matMenuTriggerFor]="menuUser" class="toolbar-button">
-      <mat-icon class="icon-style">person</mat-icon>Perfil
-    </button>
     <button mat-button [matMenuTriggerFor]="menuUser" class="toolbar-button">
       <mat-icon class="icon-style">exit_to_app</mat-icon>Cerrar Sesión
     </button>
@@ -49,6 +46,27 @@
 <mat-menu #menuRole="matMenu">
   <button mat-menu-item routerLink="/roles" class="menu-item">Listar</button>
   <button mat-menu-item routerLink="/roles/nuevo" class="menu-item">
+    Registrar
+  </button>
+</mat-menu>
+
+<mat-menu #menuEvent="matMenu">
+  <button mat-menu-item routerLink="/eventos" class="menu-item">Listar</button>
+  <button mat-menu-item routerLink="/eventos/nuevo" class="menu-item">
+    Registrar
+  </button>
+</mat-menu>
+
+<mat-menu #menuCitas="matMenu">
+  <button mat-menu-item routerLink="/citas" class="menu-item">Listar</button>
+  <button mat-menu-item routerLink="/citas/nuevo" class="menu-item">
+    Registrar
+  </button>
+</mat-menu>
+
+<mat-menu #menuForos="matMenu">
+  <button mat-menu-item routerLink="/foros" class="menu-item">Listar</button>
+  <button mat-menu-item routerLink="/foros/nuevo" class="menu-item">
     Registrar
   </button>
 </mat-menu>

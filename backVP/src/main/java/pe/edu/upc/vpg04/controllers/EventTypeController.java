@@ -4,6 +4,7 @@ import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import pe.edu.upc.vpg04.dtos.EventTypeDTO;
+import pe.edu.upc.vpg04.dtos.UserDTO;
 import pe.edu.upc.vpg04.entities.EventType;
 import pe.edu.upc.vpg04.servicesinterfaces.IEventTypeService;
 
@@ -42,4 +43,12 @@ public class EventTypeController {
         EventType d = m.map(dto, EventType.class);
         etS.update(d);
     }
+
+    @GetMapping("/{id}")
+    public EventTypeDTO listarId(@PathVariable("id") Integer id) {
+        ModelMapper m = new ModelMapper();
+        EventTypeDTO dto = m.map(etS.listarId(id), EventTypeDTO.class);
+        return dto;
+    }
+
 }

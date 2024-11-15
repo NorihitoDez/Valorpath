@@ -7,6 +7,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { RouterLink } from '@angular/router';
 import { User } from '../../../models/user';
 import { UserService } from '../../../services/user.service';
+import { catchError, of } from 'rxjs';
 
 @Component({
   selector: 'app-listaruser',
@@ -25,6 +26,7 @@ import { UserService } from '../../../services/user.service';
 })
 export class ListaruserComponent implements OnInit {
   dataSource: MatTableDataSource<User> = new MatTableDataSource();
+  mensaje: string = '';
   @ViewChild(MatPaginator) paginator!: MatPaginator;
 
   ngAfterViewInit() {
@@ -52,11 +54,26 @@ export class ListaruserComponent implements OnInit {
       this.dataSource = new MatTableDataSource(data);
     });
   }
-  eliminar(id:number){
-    this.uS.delete(id).subscribe((data)=>{
-      this.uS.list().subscribe((data)=>{
-        this.uS.setList(data)
+  eliminar(id: number) {
+    this.uS.delete(id).pipe(
+      catchError((error) => {
+        this.mensaje = 'No se puede eliminar, tiene rol registrados.';
+        this.ocultarMensaje()
+        return of(null); 
+       
       })
-    })
+    ).subscribe((data) => {
+    
+        this.uS.list().subscribe((data) => {
+          this.uS.setList(data);        
+        });
+      
+  
+    });
+  }
+  ocultarMensaje() {
+    setTimeout(() => {
+      this.mensaje = '';
+    }, 3000); 
   }
 }

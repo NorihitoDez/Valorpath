@@ -5,7 +5,97 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3f5596af-c99f-4d80-9b44-de729f592dad" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pe/edu/upc/vpg04/controllers/EventTypeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pe/edu/upc/vpg04/controllers/EventTypeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pe/edu/upc/vpg04/controllers/RoleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pe/edu/upc/vpg04/controllers/RoleController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pe/edu/upc/vpg04/servicesimplements/EventTypeServiceImplement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pe/edu/upc/vpg04/servicesimplements/EventTypeServiceImplement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pe/edu/upc/vpg04/servicesinterfaces/IEventTypeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pe/edu/upc/vpg04/servicesinterfaces/IEventTypeService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontVP.rar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/.tsbuildinfo" beforeDir="false" afterPath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/.tsbuildinfo" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps/@angular_material_button.js" beforeDir="false" afterPath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps/@angular_material_button.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps/@angular_material_core.js" beforeDir="false" afterPath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps/@angular_material_core.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps/@angular_material_datepicker.js" beforeDir="false" afterPath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps/@angular_material_datepicker.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps/@angular_material_divider.js" beforeDir="false" afterPath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps/@angular_material_divider.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps/@angular_material_form-field.js" beforeDir="false" afterPath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps/@angular_material_form-field.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps/@angular_material_icon.js" beforeDir="false" afterPath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps/@angular_material_icon.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps/@angular_material_input.js" beforeDir="false" afterPath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps/@angular_material_input.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps/@angular_material_menu.js" beforeDir="false" afterPath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps/@angular_material_menu.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps/@angular_material_paginator.js" beforeDir="false" afterPath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps/@angular_material_paginator.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps/@angular_material_select.js" beforeDir="false" afterPath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps/@angular_material_select.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps/@angular_material_table.js" beforeDir="false" afterPath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps/@angular_material_table.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps/@angular_material_toolbar.js" beforeDir="false" afterPath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps/@angular_material_toolbar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps/_metadata.json" beforeDir="false" afterPath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps/_metadata.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps/chunk-2GNKWGU3.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps/chunk-2GNKWGU3.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps/chunk-DKKUQ6TJ.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps/chunk-DKKUQ6TJ.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps/chunk-IMNM7AMF.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps/chunk-IMNM7AMF.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps/chunk-NJX65BM5.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps/chunk-NJX65BM5.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps/chunk-PDGJ55EX.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps/chunk-PDGJ55EX.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps/chunk-POF7S2KE.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps/chunk-POF7S2KE.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps/chunk-QNZXIUX2.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps/chunk-QNZXIUX2.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps_ssr/@angular_material_button.js" beforeDir="false" afterPath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps_ssr/@angular_material_button.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps_ssr/@angular_material_core.js" beforeDir="false" afterPath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps_ssr/@angular_material_core.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps_ssr/@angular_material_datepicker.js" beforeDir="false" afterPath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps_ssr/@angular_material_datepicker.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps_ssr/@angular_material_divider.js" beforeDir="false" afterPath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps_ssr/@angular_material_divider.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps_ssr/@angular_material_form-field.js" beforeDir="false" afterPath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps_ssr/@angular_material_form-field.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps_ssr/@angular_material_icon.js" beforeDir="false" afterPath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps_ssr/@angular_material_icon.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps_ssr/@angular_material_input.js" beforeDir="false" afterPath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps_ssr/@angular_material_input.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps_ssr/@angular_material_menu.js" beforeDir="false" afterPath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps_ssr/@angular_material_menu.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps_ssr/@angular_material_paginator.js" beforeDir="false" afterPath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps_ssr/@angular_material_paginator.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps_ssr/@angular_material_select.js" beforeDir="false" afterPath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps_ssr/@angular_material_select.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps_ssr/@angular_material_table.js" beforeDir="false" afterPath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps_ssr/@angular_material_table.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps_ssr/@angular_material_toolbar.js" beforeDir="false" afterPath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps_ssr/@angular_material_toolbar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps_ssr/@angular_platform-server.js" beforeDir="false" afterPath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps_ssr/@angular_platform-server.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps_ssr/_metadata.json" beforeDir="false" afterPath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps_ssr/_metadata.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps_ssr/chunk-3BM7BUXN.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps_ssr/chunk-3BM7BUXN.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps_ssr/chunk-ASXKT66N.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps_ssr/chunk-ASXKT66N.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps_ssr/chunk-HZFWVG7T.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps_ssr/chunk-HZFWVG7T.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps_ssr/chunk-IFEMF25C.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps_ssr/chunk-IFEMF25C.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps_ssr/chunk-MVASYTF6.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps_ssr/chunk-MVASYTF6.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps_ssr/chunk-PILFWGBH.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps_ssr/chunk-PILFWGBH.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps_ssr/chunk-TY4JLIPH.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps_ssr/chunk-TY4JLIPH.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontVP/src/app/app.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../frontVP/src/app/app.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontVP/src/app/app.routes.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../frontVP/src/app/app.routes.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontVP/src/app/components/event-type/creaeditaevent-type/creaeditaevent-type.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../frontVP/src/app/components/event-type/creaeditaevent-type/creaeditaevent-type.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontVP/src/app/components/event-type/creaeditaevent-type/creaeditaevent-type.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../frontVP/src/app/components/event-type/creaeditaevent-type/creaeditaevent-type.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontVP/src/app/components/event-type/listarevent-type/listarevent-type.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../frontVP/src/app/components/event-type/listarevent-type/listarevent-type.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontVP/src/app/components/event-type/listarevent-type/listarevent-type.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../frontVP/src/app/components/event-type/listarevent-type/listarevent-type.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontVP/src/app/components/event/creaeditaevent/creaeditaevent.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../frontVP/src/app/components/event/creaeditaevent/creaeditaevent.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontVP/src/app/components/event/creaeditaevent/creaeditaevent.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../frontVP/src/app/components/event/creaeditaevent/creaeditaevent.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontVP/src/app/components/event/listarevent/listarevent.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../frontVP/src/app/components/event/listarevent/listarevent.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontVP/src/app/components/event/listarevent/listarevent.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../frontVP/src/app/components/event/listarevent/listarevent.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontVP/src/app/components/role/creaeditarole/creaeditarole.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/../frontVP/src/app/components/role/creaeditarole/creaeditarole.component.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontVP/src/app/components/role/creaeditarole/creaeditarole.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../frontVP/src/app/components/role/creaeditarole/creaeditarole.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontVP/src/app/components/role/creaeditarole/creaeditarole.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../frontVP/src/app/components/role/creaeditarole/creaeditarole.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontVP/src/app/components/role/listarrole/listarrole.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/../frontVP/src/app/components/role/listarrole/listarrole.component.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontVP/src/app/components/role/listarrole/listarrole.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../frontVP/src/app/components/role/listarrole/listarrole.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontVP/src/app/components/role/listarrole/listarrole.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../frontVP/src/app/components/role/listarrole/listarrole.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontVP/src/app/components/user/creaeditauser/creaeditauser.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/../frontVP/src/app/components/user/creaeditauser/creaeditauser.component.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontVP/src/app/components/user/creaeditauser/creaeditauser.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../frontVP/src/app/components/user/creaeditauser/creaeditauser.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../frontVP/src/app/components/user/creaeditauser/creaeditauser.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../frontVP/src/app/components/user/creaeditauser/creaeditauser.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontVP/src/app/components/user/listaruser/listaruser.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/../frontVP/src/app/components/user/listaruser/listaruser.component.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontVP/src/app/components/user/listaruser/listaruser.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../frontVP/src/app/components/user/listaruser/listaruser.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontVP/src/app/components/user/listaruser/listaruser.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../frontVP/src/app/components/user/listaruser/listaruser.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontVP/src/app/models/event.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontVP/src/app/models/role.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../frontVP/src/app/models/role.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontVP/src/app/services/event-type.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../frontVP/src/app/services/event-type.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontVP/src/app/services/event.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../frontVP/src/app/services/event.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontVP/src/app/services/role.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../frontVP/src/app/services/role.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontVP/src/app/services/user.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../frontVP/src/app/services/user.service.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,26 +132,26 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
-    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
-    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
-    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;Spring Boot.Vpg04Application.executor&quot;: &quot;Run&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Temporal/Documents/GitHub/Valorpath/backVP&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "Spring Boot.Vpg04Application.executor": "Run",
+    "git-widget-placeholder": "bryan",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/Temporal/Documents/VP/v2/VG04_back_w-0Security-master",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\JHULISA\Documents\Codigos\VG04_back_w-0Security-master\src\main\java\pe\edu\upc\vpg04" />
@@ -113,22 +203,18 @@
       <workItem from="1730422462794" duration="3750000" />
       <workItem from="1730522500878" duration="6335000" />
       <workItem from="1730654419478" duration="2836000" />
+      <workItem from="1731262404755" duration="2211000" />
+      <workItem from="1731279085709" duration="2590000" />
+      <workItem from="1731366567972" duration="8986000" />
+      <workItem from="1731463913819" duration="4240000" />
+      <workItem from="1731507942407" duration="6358000" />
+      <workItem from="1731568878786" duration="987000" />
+      <workItem from="1731614675944" duration="12897000" />
+      <workItem from="1731683152622" duration="4573000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-field">
-          <url>file://$PROJECT_DIR$/src/main/java/pe/edu/upc/vpg04/entities/Role.java</url>
-          <line>14</line>
-          <properties field="user" class="pe.edu.upc.vpg04.entities.Role" />
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

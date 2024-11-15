@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
+.user-list-container {
+  font-family: 'Roboto', sans-serif;
+  margin: 30px;
+  color: #424242;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #1976D2;
+  animation: headerGlow 3s infinite alternate;
+}
+
+@keyframes headerGlow {
+  0% { color: #1976D2; }
+  50% { color: #1565C0; }
+  100% { color: #0D47A1; }
+}
+
+.header h2 {
+  font-size: 28px;
+  font-weight: 600;
+}
+
+.new-user-button {
+  font-weight: 600;
+  background: linear-gradient(45deg, #FFB300, #FF8F00);
+  color: white;
+  text-transform: uppercase;
+  padding: 10px 24px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(255, 140, 0, 0.3);
+  transition: transform 0.3s, box-shadow 0.3s;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+.new-user-button:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 18px rgba(255, 140, 0, 0.5);
+}
+
+.user-table {
+  width: 100%;
+  border-radius: 12px;
+  overflow: hidden;
+  background-color: #fafafa;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  animation: tableSlideIn 0.5s ease-out forwards;
+}
+
+@keyframes tableSlideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.mat-header-cell {
+  background-color: #E3F2FD;
+  color: #0D47A1;
+  font-weight: 700;
+  text-align: center;
+  padding: 16px;
+  font-size: 15px;
+  border-bottom: 2px solid #BBDEFB;
+}
+
+.mat-cell {
+  color: #424242;
+  text-align: center;
+  font-weight: 400;
+  padding: 14px;
+  border-bottom: 1px solid #e0e0e0;
+  font-size: 14px;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.mat-row {
+  transition: box-shadow 0.3s, transform 0.3s;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.mat-row:hover {
+  background-color: #FFF9C4;
+  transform: scale(1.01);
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+}
+
+.mat-row:active {
+  background: linear-gradient(45deg, #FFECB3, #FFF9C4);
+  transition: background 0.5s ease;
+}
+
+/* Botones de acción con zoom */
+.action-button {
+  background-color: #f0f0f0;
+  border-radius: 50%;
+  transition: transform 0.2s, background-color 0.3s;
+}
+
+.delete-button {
+  color: #FF6F00;
+}
+
+.delete-button:hover {
+  background-color: #FFE0B2;
+  color: #FF8F00;
+  transform: scale(1.15);
+}
+
+.edit-button {
+  color: #1976D2;
+}
+
+.edit-button:hover {
+  background-color: #BBDEFB;
+  color: #1565C0;
+  transform: scale(1.15);
+}
+
+/* Paginador */
+.mat-paginator {
+  background-color: #f5f5f5;
+  border-top: 2px solid #BBDEFB;
+  padding: 10px 0;
+  font-weight: 500;
+}

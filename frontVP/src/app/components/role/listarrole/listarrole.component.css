@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
+.roles-list-container {
+  font-family: 'Roboto', sans-serif;
+  margin: 30px;
+  color: #424242;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #1976D2;
+}
+
+.header h2 {
+  font-size: 28px;
+  color: #1976D2;
+  font-weight: 600;
+}
+
+.new-role-button {
+  font-weight: 600;
+  background: linear-gradient(45deg, #FFB300, #FF8F00);
+  color: white;
+  text-transform: uppercase;
+  padding: 10px 24px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(255, 140, 0, 0.3);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.new-role-button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 18px rgba(255, 140, 0, 0.5);
+}
+
+.roles-table {
+  width: 100%;
+  border-radius: 12px;
+  overflow: hidden;
+  background-color: #fafafa;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.mat-header-cell {
+  background-color: #E3F2FD;
+  color: #0D47A1;
+  font-weight: 700;
+  text-align: center;
+  padding: 16px;
+  font-size: 15px;
+  border-bottom: 2px solid #BBDEFB;
+}
+
+.mat-cell {
+  color: #424242;
+  text-align: center;
+  font-weight: 400;
+  padding: 14px;
+  border-bottom: 1px solid #e0e0e0;
+  font-size: 14px;
+}
+
+.mat-row:hover {
+  background-color: #FFF9C4;
+  transition: background-color 0.3s ease;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Botones de acción */
+.action-button {
+  background-color: #f0f0f0;
+  border-radius: 50%;
+  transition: transform 0.2s, background-color 0.3s;
+}
+
+.delete-button {
+  color: #FF6F00;
+}
+
+.delete-button:hover {
+  background-color: #FFE0B2;
+  color: #FF8F00;
+  transform: scale(1.1);
+}
+
+.edit-button {
+  color: #1976D2;
+}
+
+.edit-button:hover {
+  background-color: #BBDEFB;
+  color: #1565C0;
+  transform: scale(1.1);
+}
+
+/* Paginador */
+.mat-paginator {
+  background-color: #f5f5f5;
+  border-top: 2px solid #BBDEFB;
+  padding: 10px 0;
+  font-weight: 500;
+}

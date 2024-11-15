@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { environment } from '../../environments/environment';
 import { HttpClient } from '@angular/common/http';
 import { Subject } from 'rxjs';
+import { Eventt } from '../models/eventt';
 const base_url = environment.base
 
 @Injectable({
@@ -11,18 +12,18 @@ export class EventService {
 
   private url = `${base_url}/eventos`;
 
-  private listaCambio = new Subject<Event[]>();
+  private listaCambio = new Subject<Eventt[]>();
   constructor(private http: HttpClient) {}
 
   list() {
-    return this.http.get<Event[]>(this.url)
+    return this.http.get<Eventt[]>(this.url)
   }
 
-  insert(e:Event){
+  insert(e:Eventt){
     return this.http.post(this.url,e);
   }
 
-  setlist(listaNueva:Event[]){
+  setlist(listaNueva:Eventt[]){
       this.listaCambio.next(listaNueva);
   }
 
@@ -35,10 +36,10 @@ export class EventService {
   }
 
   listid(id:number){
-    return this.http.get<Event>(`${this.url}/${id}`);
+    return this.http.get<Eventt>(`${this.url}/${id}`);
   }
 
-  update(e:Event){
+  update(e:Eventt){
     return this.http.put(this.url,e);
   }
 

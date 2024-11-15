@@ -40,6 +40,11 @@ public class EventTypeServiceImplement implements IEventTypeService {
     }
 
     @Override
+    public EventType listarId(Integer idEventType) {
+        return eR.findById(idEventType).orElse(new EventType());
+    }
+
+    @Override
     public List<EventType> buscar(String etype) {
         return eR.buscar(etype);
     }
