@@ -34,11 +34,11 @@ import { User } from '../../../models/user';
     RouterLink,
   ],
   templateUrl: './creaeditauser.component.html',
-  styleUrl: './creaeditauser.component.css',
+  styleUrls: ['./creaeditauser.component.css'],
 })
 export class CreaeditauserComponent implements OnInit {
   form: FormGroup = new FormGroup({});
-  user: User = new User(); //trae toda la data
+  user: User = new User(); // Contiene los datos del usuario
   mensaje: string = '';
   id: number = 0;
   edicion: boolean = false;
@@ -48,36 +48,38 @@ export class CreaeditauserComponent implements OnInit {
   ];
 
   constructor(
-    private formBuil: FormBuilder, //donde vas al htlm y validas
-    private uS: UserService, //para inyectar y realizar parte del boton ACeptar
-    private router: Router, //enrutar
-    private route: ActivatedRoute
+    private formBuilder: FormBuilder, // Para construir y validar el formulario
+    private uS: UserService, // Servicio de usuario
+    private router: Router, // Para navegar entre rutas
+    private route: ActivatedRoute // Para obtener los parámetros de la ruta
   ) {}
+
   ngOnInit(): void {
     this.route.params.subscribe((data: Params) => {
       this.id = data['id'];
-      this.edicion = data['id'] != null;
+      this.edicion = this.id != null;
       this.init();
     });
 
-    this.form = this.formBuil.group({
-      codigo: [''],
-      dni: ['', [Validators.required, Validators.pattern(/^\d{8}$/)]],
-      nombre: [
+    this.form = this.formBuilder.group({
+      hcodigo: [''],
+      hdni: ['', [Validators.required, Validators.pattern(/^\d{8}$/)]],
+      hnombre: [
         '',
         [Validators.required, Validators.pattern(/^[a-zA-ZáéíóúÁÉÍÓÚÑñ]+$/)],
       ],
-      apellidos: [  
+      hapellidos: [
         '',
         [Validators.required, Validators.pattern(/^[a-zA-ZáéíóúÁÉÍÓÚÑñ]+$/)],
       ],
-      correo: ['', [Validators.required, Validators.email]],
-      password: ['', [Validators.required, Validators.maxLength(200)]],
-      cumpleanios: ['', Validators.required],
-      direccion: ['', Validators.required],
-      enabled: ['', Validators.required],
+      hcorreo: ['', [Validators.required, Validators.email]],
+      hpassword: ['', [Validators.required, Validators.maxLength(200)]],
+      hcumpleanios: ['', Validators.required],
+      hdireccion: ['', Validators.required],
+      henabled: ['', Validators.required],
     });
   }
+
   onlyNumbers(event: KeyboardEvent) {
     const charCode = event.charCode;
     if (charCode < 48 || charCode > 57) {
@@ -87,18 +89,18 @@ export class CreaeditauserComponent implements OnInit {
 
   aceptar(): void {
     if (this.form.valid) {
-      this.user.id = this.form.value.id;
-      this.user.dni = this.form.value.dni;
-      this.user.username = this.form.value.nombre;
-      this.user.lastname = this.form.value.apellidos;
-      this.user.email = this.form.value.correo;
-      this.user.password = this.form.value.password;
-      this.user.birthdate = this.form.value.cumpleanios;
-      this.user.address = this.form.value.direccion;
-      this.user.enabled = this.form.value.enabled;
+      this.user.id = this.form.value.hcodigo;
+      this.user.dni = this.form.value.hdni;
+      this.user.username = this.form.value.hnombre;
+      this.user.lastname = this.form.value.hapellidos;
+      this.user.email = this.form.value.hcorreo;
+      this.user.password = this.form.value.hpassword;
+      this.user.birthdate = this.form.value.hcumpleanios;
+      this.user.address = this.form.value.hdireccion;
+      this.user.enabled = this.form.value.henabled;
 
       if (this.edicion) {
-        this.uS.update(this.user).subscribe(() => {
+        this.uS.update(this.user).subscribe((data) => {
           this.uS.list().subscribe((data) => {
             this.uS.setList(data);
           });
@@ -106,11 +108,11 @@ export class CreaeditauserComponent implements OnInit {
       } else {
         this.uS.insert(this.user).subscribe((data) => {
           this.uS.list().subscribe((data) => {
-            this.uS.setList(data); // lista nueva a listacambio
+            this.uS.setList(data);
           });
         });
       }
-      this.router.navigate(['usuarios']); // router  qme lleve a usuraios una vez dado click al aceptar
+      this.router.navigate(['usuarios']);
     } else {
       this.mensaje = 'Complete todos los campos, revise!!';
     }
@@ -123,19 +125,20 @@ export class CreaeditauserComponent implements OnInit {
     }
     return control;
   }
+
   init() {
     if (this.edicion) {
       this.uS.listId(this.id).subscribe((data) => {
-        this.form = new FormGroup({
-          id: new FormControl(data.id),
-          dni: new FormControl(data.dni),
-          nombre: new FormControl(data.username),
-          apellidos: new FormControl(data.lastname),
-          correo: new FormControl(data.email),
-          password: new FormControl(data.password),
-          cumpleanios: new FormControl(data.birthdate),
-          direccion: new FormControl(data.address),
-          enabled: new FormControl(data.enabled),
+        this.form = this.formBuilder.group({
+          hcodigo: new FormControl (data.id),
+          hdni: new FormControl (data.dni),
+          hnombre: new FormControl (data.username),
+          hapellidos: new FormControl (data.username),
+          hcorreo: new FormControl (data.email),
+          hpassword: new FormControl (data.password),
+          hcumpleanios: new FormControl (data.birthdate),
+          hdireccion: new FormControl (data.address),
+          henabled: new FormControl (data.enabled),
         });
       });
     }

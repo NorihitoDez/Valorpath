@@ -23,10 +23,9 @@ export class EventTypeService {
     return this.http.post(this.url, et);
   }
 
-
   setlist(listaNueva:EventType[]){
     this.listaCambio.next(listaNueva);
-}
+  }
 
   getList() {
     return this.listaCambio.asObservable();

@@ -49,4 +49,9 @@ public class EventServiceImplement implements IEventService {
     public List<String[]> cantidadEventoporPsicologo() {
         return eR.quatityPsicoEvent();
     }
+
+    @Override
+    public Event listarId(Integer idEvent) {
+        return null;
+    }
 }

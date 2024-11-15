@@ -10,6 +10,14 @@ import { CreaeditaeventTypeComponent } from './components/event-type/creaeditaev
 import { ListareventTypeComponent } from './components/event-type/listarevent-type/listarevent-type.component';
 import { EventComponent } from './components/event/event.component';
 import { CreaeditaeventComponent } from './components/event/creaeditaevent/creaeditaevent.component';
+import { ForumComponent } from './components/forum/forum.component';
+import { ForumCreaeditaComponent } from './components/forum/forum-creaedita/forum-creaedita.component';
+import { PostComponent } from './components/post/post.component';
+import { Component } from '@angular/core';
+import { PostCreaeditaComponent } from './components/post/post-creaedita/post-creaedita.component';
+import { AppointmentComponent } from './components/appointment/appointment.component';
+import { AppointmentCreaeditaComponent } from './components/appointment/appointment-creaedita/appointment-creaedita.component';
+
 
 export class StaticLandingComponent {}
 
@@ -73,6 +81,48 @@ export const routes: Routes = [
         component: CreaeditaeventComponent
       }
       
+    ]
+  },
+  {
+    path:'foros',
+    component:ForumComponent,
+    children:[
+      {
+        path:'nuevo',
+        component: ForumCreaeditaComponent
+      },
+      {
+        path:'ediciones/:id',
+        component:ForumCreaeditaComponent
+      }
+    ]
+  },
+  {
+    path:'posts',
+    component:PostComponent,
+    children:[
+      {
+        path:'nuevo',
+        component: PostComponent,
+      },
+      {
+        path:'ediciones/:id',
+        component: PostCreaeditaComponent
+      }
+    ]
+  },
+  {
+    path:'citas',
+    component:AppointmentComponent,
+    children:[
+      {
+        path:'nuevo',
+        component:AppointmentCreaeditaComponent,
+      },
+      {
+        path:'ediciones/:id',
+        component:AppointmentCreaeditaComponent
+      }
     ]
   }
 ];

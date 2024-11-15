@@ -1,0 +1,81 @@
+<div class="container">
+  <h2>Registro de Publicaciones</h2>
+  <form [formGroup]="form" (submit)="aceptar()">
+    <mat-form-field class="example-full-width" *ngIf="edicion">
+      <mat-label>Código</mat-label>
+      <input matInput placeholder="Codigo" formControlName="codigo" readonly />
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width">
+      <mat-label>Titulo</mat-label>
+      <input matInput placeholder="Titulo" formControlName="titulo" />
+      <mat-error *ngIf="form.get('titulo')?.hasError('required')">
+        El titulo es obligatorio.
+      </mat-error>
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width">
+      <mat-label>Fecha</mat-label>
+      <input
+        matInput
+        [matDatepicker]="picker"
+        formControlName="fecha"
+        placeholder="MM/DD/YYYY"
+        [min]="fechaminima"
+      />
+      <mat-datepicker-toggle
+        matIconSuffix
+        [for]="picker"
+      ></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
+      <mat-error *ngIf="form.get('fecha')?.hasError('required')">
+        La fecha es obligatoria.
+      </mat-error>
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width">
+      <mat-label>Comentario</mat-label>
+      <textarea
+        matInput
+        placeholder="Comentario"
+        formControlName="comentario"
+      ></textarea>
+      <mat-error *ngIf="form.get('comentario')?.hasError('required')">
+        El comentario es obligatorio.
+      </mat-error>
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width">
+      <mat-label>Usuario Verterano</mat-label>
+      <mat-select formControlName="usuario">
+        <mat-option *ngFor="let u of listaUsuariosVeteranos" [value]="u">
+          {{ u.username}}
+        </mat-option>
+      </mat-select>
+      <mat-error *ngIf="form.get('usuario')?.hasError('required')">
+        Es obligatorio.
+      </mat-error>
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width">
+      <mat-label>Foro</mat-label>
+      <mat-select formControlName="foro">
+        <mat-option *ngFor="let f of listaForos" [value]="f">
+          {{ f.title }}
+        </mat-option>
+      </mat-select>
+      <mat-error *ngIf="form.get('foro')?.hasError('required')"
+        >Es obligatorio.</mat-error
+      >
+    </mat-form-field>
+
+    <div class="button-container">
+      <button mat-raised-button color="primary" type="submit">Aceptar</button>
+      <button mat-raised-button color="warn" routerLink="/publicaciones" class="cancel">
+        Cancelar
+      </button>
+    </div>
+
+    <p>{{ mensaje }}</p>
+  </form>
+</div>
