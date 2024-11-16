@@ -23,6 +23,8 @@ import { RegisterComponent } from "./components/register/register.component";
 import { LandingComponent } from "./components/landing/landing.component";
 import { CitasporfechaComponent } from "./components/reporte/citasporfecha/citasporfecha.component";
 import { CitascanceladasComponent } from "./components/reporte/citascanceladas/citascanceladas.component";
+import { ReportequantityeventbypsichologistComponent } from "./components/reporte/reportequantityeventbypsichologist/reportequantityeventbypsichologist.component";
+import { ReportequantityveteranineventComponent } from "./components/reporte/reportequantityveteraninevent/reportequantityveteraninevent.component";
 //export class StaticLandingComponent {}
 
 export const routes: Routes = [
@@ -172,6 +174,14 @@ export const routes: Routes = [
       {
         path:'citascanceladas',
         component: CitascanceladasComponent
+      },
+      {
+        path:'EventosxPsicologo',
+        component:ReportequantityeventbypsichologistComponent
+      },
+      {
+        path:'VeteranosxEvento',
+        component:ReportequantityveteranineventComponent
       }
     ],
     canActivate: [seguridadGuard],

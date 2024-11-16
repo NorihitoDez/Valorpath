@@ -1,0 +1,18 @@
+<!-- reporteQuantityEventbyPsichologist.component.html -->
+<table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+    <!-- Psychologist Column -->
+    <ng-container matColumnDef="psychologist">
+      <th mat-header-cell *matHeaderCellDef> Psicologos </th>
+      <td mat-cell *matCellDef="let element"> {{element.psychologist}} </td>
+    </ng-container>
+  
+    <!-- Quantity of Events Column -->
+    <ng-container matColumnDef="quantityEvents">
+      <th mat-header-cell *matHeaderCellDef> Cantidad de Eventos </th>
+      <td mat-cell *matCellDef="let element"> {{element.quantityEvents}} </td>
+    </ng-container>
+  
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+  
