@@ -70,6 +70,7 @@ export class RegisterComponent implements OnInit {
       password: ["", [Validators.required, Validators.maxLength(200)]],
       cumpleanios: ["", Validators.required],
       direccion: ["", Validators.required],
+      rol: ["", Validators.required], // Nuevo campo para el rol
     });
   }
   onlyNumbers(event: KeyboardEvent) {
@@ -81,6 +82,7 @@ export class RegisterComponent implements OnInit {
 
   registrar(): void {
     if (this.form.valid) {
+      
       this.user.dni = this.form.value.dni;
       this.user.username = this.form.value.nombre;
       this.user.lastname = this.form.value.apellidos;
@@ -88,7 +90,17 @@ export class RegisterComponent implements OnInit {
       this.user.password = this.form.value.password;
       this.user.birthdate = this.form.value.cumpleanios;
       this.user.address = this.form.value.direccion;
+      
     } else {
+      console.log(this.form.value);
+      this.user.dni = this.form.value.dni;
+      this.user.username = this.form.value.nombre;
+      this.user.lastname = this.form.value.apellidos;
+      this.user.email = this.form.value.correo;
+      this.user.password = this.form.value.password;
+      this.user.birthdate = this.form.value.cumpleanios;
+      this.user.address = this.form.value.direccion;
+      
       this.uS.insert(this.user).subscribe((data) => {
         this.uS.list().subscribe((data) => {
           this.uS.setList(data); // lista nueva a listacambio

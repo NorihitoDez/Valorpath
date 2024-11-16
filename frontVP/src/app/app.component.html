@@ -1,5 +1,8 @@
 <!--PARA EL INICO DE SECICON-->
 <mat-toolbar class="custom-toolbar" *ngIf="verificar()">
+  <button mat-button class="toolbar-button logo-button">
+    <img src="assets/images/logo.png" alt="Logo" class="logo-image">
+  </button>
   <div class="left-menu">
     <!-- Opciones para el Administrador -->
     <ng-container *ngIf="isAdmin()">

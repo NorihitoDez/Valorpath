@@ -44,4 +44,5 @@ export class UserService {
   listarPorRol(rol:string){
     return this.http.get<User[]>(`${this.url}/listarrol/${rol}`)
   }
+  
 }
