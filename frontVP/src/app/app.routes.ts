@@ -8,11 +8,44 @@ import { ForumComponent } from "./components/forum/forum.component";
 import { CreaeditaforumComponent } from "./components/forum/creaeditaforum/creaeditaforum.component";
 import { ReporteComponent } from "./components/reporte/reporte.component";
 import { MostactiveforumComponent } from "./components/reporte/mostactiveforum/mostactiveforum.component";
-
-
-export class StaticLandingComponent {}
+import { AppointmentComponent } from "./components/appointment/appointment.component";
+import { AppointmentCreaeditaComponent } from "./components/appointment/appointment-creaedita/appointment-creaedita.component";
+import { EventComponent } from "./components/event/event.component";
+import { CreaeditaeventComponent } from "./components/event/creaeditaevent/creaeditaevent.component";
+import { EventTypeComponent } from "./components/event-type/event-type.component";
+import { CreaeditaeventTypeComponent } from "./components/event-type/creaeditaevent-type/creaeditaevent-type.component";
+import { PostComponent } from "./components/post/post.component";
+import { PostCreaeditaComponent } from "./components/post/post-creaedita/post-creaedita.component";
+import { LoginComponent } from "./components/login/login.component";
+import { seguridadGuard } from "./guard/seguridad.guard";
+import { HomeComponent } from "./components/home/home.component";
+import { RegisterComponent } from "./components/register/register.component";
+import { LandingComponent } from "./components/landing/landing.component";
+//export class StaticLandingComponent {}
 
 export const routes: Routes = [
+  {
+    path: '',
+    redirectTo: 'landing',
+    pathMatch: 'full',
+  },
+  {
+    path: 'homes',
+    component: HomeComponent,
+    canActivate: [seguridadGuard], // solo construcciones, se debe agregar a cada uno
+  },
+  {
+    path:'landing',
+    component: LandingComponent
+},
+  {
+    path: 'login',
+    component: LoginComponent,
+  },
+  {
+    path: 'register',
+    component: RegisterComponent,
+},
   {
     path: "usuarios",
     component: UserComponent,
@@ -26,6 +59,7 @@ export const routes: Routes = [
         component: CreaeditauserComponent,
       },
     ],
+    canActivate: [seguridadGuard],
   },
   {
     path: "roles",
@@ -40,6 +74,7 @@ export const routes: Routes = [
         component: CreaeditaroleComponent,
       },
     ],
+    canActivate: [seguridadGuard],
   },
   //para foros
   {
@@ -56,6 +91,7 @@ export const routes: Routes = [
         component: CreaeditaforumComponent, // Asegúrate de que la ruta esté bien configurada
       },
     ],
+    canActivate: [seguridadGuard],
   },
   {
     path:'reportes',
@@ -65,6 +101,69 @@ export const routes: Routes = [
         path:"mostActiveForum",
         component:MostactiveforumComponent
       }
-    ]
-  }
+    ],
+    canActivate: [seguridadGuard],
+    
+  },
+  {
+    path:'citas',
+    component:AppointmentComponent,
+    children:[
+      {
+        path:'nuevo',
+        component:AppointmentCreaeditaComponent,
+      },
+      {
+        path:'ediciones/:id',
+        component:AppointmentCreaeditaComponent
+      }
+    ],
+    canActivate: [seguridadGuard],
+  },
+  {
+    path:'eventos',
+    component: EventComponent,
+    children:[
+      {
+        path:'nuevo',
+        component:CreaeditaeventComponent
+      },
+      {
+        path:'ediciones/:id',
+        component: CreaeditaeventComponent
+      }
+      
+    ],
+    canActivate: [seguridadGuard],
+  },
+  {
+    path: 'tipoevento',
+    component: EventTypeComponent,
+    children:[
+      {
+        path:'nuevo',
+        component: CreaeditaeventTypeComponent,
+      },
+      {
+        path: 'ediciones/:id',
+        component: CreaeditaeventTypeComponent,
+      }
+    ],
+    canActivate: [seguridadGuard],
+  },
+  {
+    path:'posts',
+    component:PostComponent,
+    children:[
+      {
+        path:'nuevo',
+        component: PostComponent,
+      },
+      {
+        path:'ediciones/:id',
+        component: PostCreaeditaComponent
+      }
+    ],
+    canActivate: [seguridadGuard],
+  },
 ];

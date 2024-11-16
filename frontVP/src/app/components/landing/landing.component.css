@@ -1,0 +1,126 @@
+/* Estilos generales */
+body {
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(135deg, #0d0d0d, #1a1a1a);
+    color: #fefefe;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    transition: background 0.3s ease-in-out;
+}
+
+/* Header y Menú */
+.header {
+    background: #1c1c1e; /* Color original de la barra */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo-container a {
+    display: flex;
+}
+
+.logo {
+    height: 50px;
+    width: auto;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.logo:hover {
+    transform: scale(1.05);
+}
+
+.nav-menu {
+    display: flex;
+}
+
+.nav-menu ul {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-menu a {
+    color: #ffdd57;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.nav-menu a:hover,
+.nav-menu a.active:hover {
+    background-color: #ffdd57;
+    color: #000;
+}
+
+.nav-menu a.active {
+    background: transparent; /* Igual al fondo para no diferenciarse tanto */
+    color: #ffdd57; /* Mismo color que los otros enlaces */
+}
+
+.nav-menu .logout {
+    color: #ff5757;
+}
+
+.nav-menu .logout:hover {
+    background-color: #ff5757;
+    color: #fff;
+}
+
+/* Sección de contenido principal */
+.content {
+    flex: 1;
+    padding: 40px 20px;
+}
+
+.home-section {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.home-section h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #ffdd57;
+}
+
+.home-section p {
+    font-size: 18px;
+    line-height: 1.5;
+    color: #ddd;
+}
+
+/* Adaptación para dispositivos móviles */
+@media (max-width: 768px) {
+    .nav-menu ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .home-section h1 {
+        font-size: 28px;
+    }
+
+    .home-section p {
+        font-size: 16px;
+    }
+}

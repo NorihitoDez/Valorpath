@@ -1,0 +1,84 @@
+/* Contenedor principal para el login */
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Ocupa todo el alto de la pantalla */
+    background-color: #f4f7fc; /* Fondo suave */
+  }
+  
+  /* Card del formulario de login */
+  .login-card {
+    width: 100%;
+    max-width: 500px; /* Ancho máximo */
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+    text-align: center;
+  }
+  
+  /* Cabecera del formulario con el logo y título */
+  .login-header {
+    margin-bottom: 20px;
+  }
+  
+  .login-header .logo {
+    width: 150px; /* Tamaño del logo */
+    margin-bottom: 10px;
+  }
+  
+  .login-header h2 {
+    font-size: 24px;
+    font-weight: 600;
+    color: #333;
+  }
+  
+  /* Estilo para los campos de entrada */
+  mat-form-field {
+    width: 100%;
+    margin-bottom: 15px; /* Espacio entre los campos */
+  }
+  
+  mat-label {
+    font-size: 14px;
+    color: #666;
+  }
+  
+  input, textarea {
+    padding: 12px;
+    font-size: 14px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    width: 100%;
+  }
+  
+  mat-error {
+    color: red;
+    font-size: 12px;
+    margin-top: 5px;
+  }
+  
+  /* Estilo para el botón de agregar */
+  button {
+    background-color: #4CAF50; /* Verde */
+    color: white;
+    padding: 12px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+  }
+  
+  button:hover {
+    background-color: #45a049; /* Verde más oscuro cuando se pasa el ratón */
+  }
+  
+  /* Botón de "Crear cuenta" con estilo adicional */
+  .text-end {
+    display: flex;
+    justify-content: flex-end;
+  }
+  

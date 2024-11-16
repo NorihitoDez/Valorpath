@@ -1,65 +1,153 @@
-<mat-toolbar class="custom-toolbar">
-  <div class="toolbar-left">
-    <button mat-button [matMenuTriggerFor]="menuUser" class="toolbar-button">
-      <mat-icon class="icon-style">person</mat-icon>Usuarios
-    </button>
-    <button mat-button [matMenuTriggerFor]="menuRole" class="toolbar-button">
-      <mat-icon class="icon-style">assignment</mat-icon>Roles
-    </button>
-    <button mat-button [matMenuTriggerFor]="menuUser" class="toolbar-button">
-      <mat-icon class="icon-style">healing</mat-icon>Citas
-    </button>
-    <button mat-button [matMenuTriggerFor]="menuUser" class="toolbar-button">
-      <mat-icon class="icon-style">event</mat-icon>Eventos
-    </button>
-    <!--para el foro-->
-    <button mat-button [matMenuTriggerFor]="menuForum" class="toolbar-button">
-      <mat-icon class="icon-style">forum</mat-icon>Foros
-    </button>
-    <button mat-button [matMenuTriggerFor]="menuUser" class="toolbar-button">
-      <mat-icon class="icon-style">library_books</mat-icon>Recursos
-    </button>
-    <button mat-button [matMenuTriggerFor]="menuUser" class="toolbar-button">
-      <mat-icon class="icon-style">edit</mat-icon>Post
-    </button>
-    <button mat-button [matMenuTriggerFor]="menuReportes" class="toolbar-button" >
-      <mat-icon>insert_chart</mat-icon>Reportes
-  </button>
+<!--PARA EL INICO DE SECICON-->
+<mat-toolbar class="custom-toolbar" *ngIf="verificar()">
+  <div class="left-menu">
+    <!-- Opciones para el Administrador -->
+    <ng-container *ngIf="isAdmin()">
+      <button mat-button [matMenuTriggerFor]="menuUser" class="toolbar-button">
+        <mat-icon class="icon-style">person</mat-icon>Usuarios
+      </button>
+      <button mat-button [matMenuTriggerFor]="menuRole" class="toolbar-button">
+        <mat-icon class="icon-style">assignment</mat-icon>Roles
+      </button>
+      <button mat-button [matMenuTriggerFor]="menuCitas" class="toolbar-button">
+        <mat-icon class="icon-style">healing</mat-icon>Citas
+      </button>
+      <button mat-button [matMenuTriggerFor]="menuEvent" class="toolbar-button">
+        <mat-icon class="icon-style">event</mat-icon>Eventos
+      </button>
+      <button mat-button [matMenuTriggerFor]="menuForum" class="toolbar-button">
+        <mat-icon class="icon-style">forum</mat-icon>Foros
+      </button>
+      <button mat-button [matMenuTriggerFor]="menuUser" class="toolbar-button">
+        <mat-icon class="icon-style">library_books</mat-icon>Recursos
+      </button>
+      <button mat-button [matMenuTriggerFor]="menuUser" class="toolbar-button">
+        <mat-icon class="icon-style">edit</mat-icon>Post
+      </button>
+      <button mat-button [matMenuTriggerFor]="menuReportes" class="toolbar-button">
+        <mat-icon>insert_chart</mat-icon>Reportes
+      </button>
+    </ng-container>
+
+    <!-- Opciones adicionales para Psicólogos -->
+    <ng-container *ngIf="isPsicologo()">
+      <button mat-button [matMenuTriggerFor]="menuReportes" class="toolbar-button">
+        <mat-icon>insert_chart</mat-icon>Reportes
+      </button>
+      <button mat-button [matMenuTriggerFor]="menuCitas" class="toolbar-button">
+        <mat-icon class="icon-style">healing</mat-icon>Citas
+      </button>
+      <button mat-button [matMenuTriggerFor]="menuEvent" class="toolbar-button">
+        <mat-icon class="icon-style">event</mat-icon>Eventos
+      </button>
+      <button mat-button [matMenuTriggerFor]="menuForum" class="toolbar-button">
+        <mat-icon class="icon-style">forum</mat-icon>Foros
+      </button>
+      <button mat-button [matMenuTriggerFor]="menuUser" class="toolbar-button">
+        <mat-icon class="icon-style">library_books</mat-icon>Recursos
+      </button>
+      <button mat-button [matMenuTriggerFor]="menuUser" class="toolbar-button">
+        <mat-icon class="icon-style">edit</mat-icon>Post
+      </button>
+      
+    </ng-container>
+
+    <ng-container *ngIf="isVeterano()">
+      <button mat-button [matMenuTriggerFor]="menuCitas" class="toolbar-button">
+        <mat-icon class="icon-style">healing</mat-icon>Citas
+      </button>
+      <button mat-button [matMenuTriggerFor]="menuEvent" class="toolbar-button">
+        <mat-icon class="icon-style">event</mat-icon>Eventos
+      </button>
+      <button mat-button [matMenuTriggerFor]="menuForum" class="toolbar-button">
+        <mat-icon class="icon-style">forum</mat-icon>Foros
+      </button>
+      <button mat-button [matMenuTriggerFor]="menuUser" class="toolbar-button">
+        <mat-icon class="icon-style">library_books</mat-icon>Recursos
+      </button>
+      <button mat-button [matMenuTriggerFor]="menuUser" class="toolbar-button">
+        <mat-icon class="icon-style">edit</mat-icon>Post
+      </button>
+    </ng-container>
   </div>
-  
-  <div class="toolbar-right">
-    <button mat-button [matMenuTriggerFor]="menuUser" class="toolbar-button">
-      <mat-icon class="icon-style">person</mat-icon>Perfil
+
+  <div class="right-menu">
+    <button mat-button [matMenuTriggerFor]="menuSalir" style="color: rgb(0, 0, 0)">
+      <mat-icon>person</mat-icon>Usuario
     </button>
-    <button mat-button [matMenuTriggerFor]="menuUser" class="toolbar-button">
-      <mat-icon class="icon-style">exit_to_app</mat-icon>Cerrar Sesión
+    <button mat-button [routerLink]="['/homes']" style="color: rgb(0, 0, 0)">
+      <mat-icon>home</mat-icon>Home
     </button>
   </div>
 </mat-toolbar>
 
-<mat-menu #menuUser="matMenu">
-  <button mat-menu-item routerLink="/usuarios" class="menu-item">Listar</button>
+ <!--para seleccioanr opc. usuarios-->
+<mat-menu #menuUusarios="matMenu">
+  <button mat-menu-item routerLink="/usuarios" class="menu-item">Listar usuarios</button>
   <button mat-menu-item routerLink="/usuarios/nuevo" class="menu-item">
-    Registrar
+    Registrar un usuario
   </button>
 </mat-menu>
 
+ <!--para seleccioanr opc. roles-->
 <mat-menu #menuRole="matMenu">
-  <button mat-menu-item routerLink="/roles" class="menu-item">Listar</button>
+  <button mat-menu-item routerLink="/roles" class="menu-item">Listar roles</button>
   <button mat-menu-item routerLink="/roles/nuevo" class="menu-item">
-    Registrar
+    Registrar un rol
   </button>
 </mat-menu>
-<!--para lo que es el foro-->
+
+ <!--para seleccioanr opc. eventos-->
+<mat-menu #menuEvent="matMenu">
+  <button mat-menu-item routerLink="/eventos" class="menu-item">Listar eventos</button>
+  <button mat-menu-item routerLink="/eventos/nuevo" class="menu-item">
+    Registrar un evento
+  </button>
+</mat-menu>
+
+
+
+ <!--para seleccioanr opc. citas-->
+<mat-menu #menuCitas="matMenu">
+  <button mat-menu-item routerLink="/citas" class="menu-item">Listar citas</button>
+  <button mat-menu-item routerLink="/citas/nuevo" class="menu-item">
+    Registrar citas
+  </button>
+</mat-menu>
+
+ <!--para seleccioanr opc. foros-->
 <mat-menu #menuForum="matMenu">
   <button mat-menu-item routerLink="/foros" class="menu-item">Listar foros</button>
   <button mat-menu-item routerLink="/foros/nuevo" class="menu-item">Publicar foro</button>
 </mat-menu>
+ <!--para seleccioanr opc. posts-->
+
+ <mat-menu #menuUser="matMenu">
+  <button mat-menu-item routerLink="/posts" class="menu-item">Listar posts</button>
+  <button mat-menu-item routerLink="/posts/nuevo" class="menu-item">
+    Registrar un post
+  </button>
+</mat-menu>
+
+<mat-menu #menuSalir="matMenu">
+  <button mat-menu-item routerLink="/login" (click)="cerrar()" class="custom-menu-item">
+    <mat-icon>logout</mat-icon>
+    <span>Cerrar sesión</span>
+  </button>
+  <button mat-menu-item class="custom-menu-item"> 
+    Rol:
+    <span>{{ role }}</span>
+  </button>
+  <button mat-menu-item class="custom-menu-item"> 
+    Usuario:
+    <span>{{ username }}</span>
+  </button>
+</mat-menu>
+
 <!--para los reportes de foro-->
 <mat-menu #menuReportes="matMenu">
   <button mat-menu-item routerLink="/reportes" class="custom-menu-item"><mat-icon> pie_chart</mat-icon>Reporte de Foros x Psicologos</button>
   <button mat-menu-item routerLink="/reportes/mostActiveForum" class="custom-menu-item"><mat-icon> pie_chart</mat-icon>Reporte Foro más activo</button>
 </mat-menu> 
-
 
 <router-outlet></router-outlet>

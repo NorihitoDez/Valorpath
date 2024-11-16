@@ -1,0 +1,69 @@
+<div>
+    <div><h1>Lista de eventos</h1></div>
+    <button mat-raised-button class="new-role-button" routerLink="/eventos/nuevo">
+      Nuevo
+    </button>
+    <button mat-raised-button class="new-role-button" routerLink="/tipoevento">
+      Tipo de eventos
+    </button>
+    <div>
+        <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+          
+            <!-- Código Column -->
+            <ng-container matColumnDef="c1">
+              <th mat-header-cell *matHeaderCellDef> Código </th>
+              <td mat-cell *matCellDef="let element"> {{element.idEvent}} </td>
+            </ng-container>
+          
+            <!-- Nombre Column -->
+            <ng-container matColumnDef="c2">
+              <th mat-header-cell *matHeaderCellDef> Nombre </th>
+              <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+            </ng-container>
+          
+            <!-- Descripción Column -->
+            <ng-container matColumnDef="c3">
+              <th mat-header-cell *matHeaderCellDef> Descripción </th>
+              <td mat-cell *matCellDef="let element"> {{element.description}} </td>
+            </ng-container>
+          
+            <!-- Fecha de Inicio Column -->
+            <ng-container matColumnDef="c4">
+              <th mat-header-cell *matHeaderCellDef> Fecha de Inicio </th>
+              <td mat-cell *matCellDef="let element"> {{element.startDate}} </td>
+            </ng-container>
+  
+            <!-- Fecha de Fin Column -->
+            <ng-container matColumnDef="c5">
+              <th mat-header-cell *matHeaderCellDef> Fecha de Fin </th>
+              <td mat-cell *matCellDef="let element"> {{element.endDate}} </td>
+            </ng-container>
+  
+            <!-- Psicologo Column -->
+            <ng-container matColumnDef="c6">
+              <th mat-header-cell *matHeaderCellDef> Psicólogo </th>
+              <td mat-cell *matCellDef="let element"> {{ element.psicologo?.username }} </td>
+            </ng-container>
+  
+            <!-- Eliminar Column -->
+            <ng-container matColumnDef="accion01">
+              <th mat-header-cell *matHeaderCellDef> Eliminar </th>
+              <td mat-cell *matCellDef="let element" (click)="eliminar(element.idEvent)">
+                <mat-icon style="color:#ce940c">delete</mat-icon>
+              </td>
+            </ng-container>
+  
+            <!-- Actualizar Column -->
+            <ng-container matColumnDef="accion02">
+              <th mat-header-cell *matHeaderCellDef> Actualizar </th>
+              <td mat-cell *matCellDef="let element" [routerLink]="['ediciones', element.idEvent]">
+                <mat-icon style="color: #ce940c">edit</mat-icon>
+              </td>
+            </ng-container>
+          
+            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+          </table>
+    </div>
+  </div>
+  
