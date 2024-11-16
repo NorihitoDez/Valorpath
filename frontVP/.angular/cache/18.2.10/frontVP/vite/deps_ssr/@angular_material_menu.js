@@ -7,15 +7,15 @@ import {
   TemplatePortal
 } from "./chunk-5MBXMD3A.js";
 import {
-  CdkScrollableModule
-} from "./chunk-HUK4ZYBK.js";
-import {
   animate,
   state,
   style,
   transition,
   trigger
 } from "./chunk-UJW43TT6.js";
+import {
+  CdkScrollableModule
+} from "./chunk-HUK4ZYBK.js";
 import {
   DOWN_ARROW,
   Directionality,

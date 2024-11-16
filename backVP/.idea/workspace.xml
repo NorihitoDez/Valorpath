@@ -5,102 +5,187 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3f5596af-c99f-4d80-9b44-de729f592dad" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/pe/edu/upc/vpg04/dtos/AppointmentbyDateDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/pe/edu/upc/vpg04/dtos/CancelledAppointmentsDTO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pe/edu/upc/vpg04/controllers/EventTypeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pe/edu/upc/vpg04/controllers/EventTypeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pe/edu/upc/vpg04/controllers/RoleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pe/edu/upc/vpg04/controllers/RoleController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pe/edu/upc/vpg04/servicesimplements/EventTypeServiceImplement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pe/edu/upc/vpg04/servicesimplements/EventTypeServiceImplement.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pe/edu/upc/vpg04/servicesinterfaces/IEventTypeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pe/edu/upc/vpg04/servicesinterfaces/IEventTypeService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pe/edu/upc/vpg04/controllers/AppointmentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pe/edu/upc/vpg04/controllers/AppointmentController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pe/edu/upc/vpg04/repositories/IAppointmentRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pe/edu/upc/vpg04/repositories/IAppointmentRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pe/edu/upc/vpg04/servicesimplements/AppointmentServiceImplement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pe/edu/upc/vpg04/servicesimplements/AppointmentServiceImplement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pe/edu/upc/vpg04/servicesinterfaces/IAppointmentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pe/edu/upc/vpg04/servicesinterfaces/IAppointmentService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontVP.rar" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/.tsbuildinfo" beforeDir="false" afterPath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/.tsbuildinfo" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps/@angular_common.js" beforeDir="false" afterPath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps/@angular_common.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps/@angular_common.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps/@angular_common.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps/@angular_common_http.js" beforeDir="false" afterPath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps/@angular_common_http.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps/@angular_common_http.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps/@angular_common_http.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps/@angular_core.js" beforeDir="false" afterPath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps/@angular_core.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps/@angular_core.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps/@angular_core.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps/@angular_forms.js" beforeDir="false" afterPath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps/@angular_forms.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps/@angular_forms.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps/@angular_forms.js.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps/@angular_material_button.js" beforeDir="false" afterPath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps/@angular_material_button.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps/@angular_material_button.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps/@angular_material_button.js.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps/@angular_material_core.js" beforeDir="false" afterPath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps/@angular_material_core.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps/@angular_material_core.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps/@angular_material_core.js.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps/@angular_material_datepicker.js" beforeDir="false" afterPath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps/@angular_material_datepicker.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps/@angular_material_datepicker.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps/@angular_material_datepicker.js.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps/@angular_material_divider.js" beforeDir="false" afterPath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps/@angular_material_divider.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps/@angular_material_divider.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps/@angular_material_divider.js.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps/@angular_material_form-field.js" beforeDir="false" afterPath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps/@angular_material_form-field.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps/@angular_material_form-field.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps/@angular_material_form-field.js.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps/@angular_material_icon.js" beforeDir="false" afterPath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps/@angular_material_icon.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps/@angular_material_icon.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps/@angular_material_icon.js.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps/@angular_material_input.js" beforeDir="false" afterPath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps/@angular_material_input.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps/@angular_material_input.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps/@angular_material_input.js.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps/@angular_material_menu.js" beforeDir="false" afterPath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps/@angular_material_menu.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps/@angular_material_menu.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps/@angular_material_menu.js.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps/@angular_material_paginator.js" beforeDir="false" afterPath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps/@angular_material_paginator.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps/@angular_material_paginator.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps/@angular_material_paginator.js.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps/@angular_material_select.js" beforeDir="false" afterPath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps/@angular_material_select.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps/@angular_material_select.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps/@angular_material_select.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps/@angular_material_snack-bar.js" beforeDir="false" afterPath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps/@angular_material_snack-bar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps/@angular_material_snack-bar.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps/@angular_material_snack-bar.js.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps/@angular_material_table.js" beforeDir="false" afterPath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps/@angular_material_table.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps/@angular_material_table.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps/@angular_material_table.js.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps/@angular_material_toolbar.js" beforeDir="false" afterPath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps/@angular_material_toolbar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps/@angular_material_toolbar.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps/@angular_material_toolbar.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps/@angular_platform-browser.js" beforeDir="false" afterPath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps/@angular_platform-browser.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps/@angular_platform-browser.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps/@angular_platform-browser.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps/@angular_platform-browser_animations_async.js" beforeDir="false" afterPath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps/@angular_platform-browser_animations_async.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps/@angular_platform-browser_animations_async.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps/@angular_platform-browser_animations_async.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps/@angular_router.js" beforeDir="false" afterPath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps/@angular_router.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps/@angular_router.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps/@angular_router.js.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps/_metadata.json" beforeDir="false" afterPath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps/_metadata.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps/chunk-2GNKWGU3.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps/chunk-2GNKWGU3.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps/chunk-DKKUQ6TJ.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps/chunk-DKKUQ6TJ.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps/chunk-IMNM7AMF.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps/chunk-IMNM7AMF.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps/chunk-NJX65BM5.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps/chunk-NJX65BM5.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps/chunk-PDGJ55EX.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps/chunk-PDGJ55EX.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps/chunk-POF7S2KE.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps/chunk-POF7S2KE.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps/chunk-QNZXIUX2.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps/chunk-QNZXIUX2.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps/browser-P5EFYFZL.js" beforeDir="false" afterPath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps/browser-P5EFYFZL.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps/browser-P5EFYFZL.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps/browser-P5EFYFZL.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps/chunk-34BF3AMV.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps/chunk-34BF3AMV.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps/chunk-5B47V2FY.js" beforeDir="false" afterPath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps/chunk-5B47V2FY.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps/chunk-5B47V2FY.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps/chunk-5B47V2FY.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps/chunk-5ID5CTPN.js" beforeDir="false" afterPath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps/chunk-5ID5CTPN.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps/chunk-5ID5CTPN.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps/chunk-5ID5CTPN.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps/chunk-CBN7SDST.js" beforeDir="false" afterPath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps/chunk-CBN7SDST.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps/chunk-CBN7SDST.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps/chunk-CBN7SDST.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps/chunk-CMCEEVFK.js" beforeDir="false" afterPath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps/chunk-CMCEEVFK.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps/chunk-CMCEEVFK.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps/chunk-CMCEEVFK.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps/chunk-H4WBRGT6.js" beforeDir="false" afterPath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps/chunk-H4WBRGT6.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps/chunk-H4WBRGT6.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps/chunk-H4WBRGT6.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps/chunk-L5ZKIL3A.js" beforeDir="false" afterPath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps/chunk-L5ZKIL3A.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps/chunk-L5ZKIL3A.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps/chunk-L5ZKIL3A.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps/chunk-MJ6RAITD.js" beforeDir="false" afterPath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps/chunk-MJ6RAITD.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps/chunk-MJ6RAITD.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps/chunk-MJ6RAITD.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps/chunk-OOC5AZK3.js" beforeDir="false" afterPath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps/chunk-OOC5AZK3.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps/chunk-OOC5AZK3.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps/chunk-OOC5AZK3.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps/chunk-PF6LNL77.js" beforeDir="false" afterPath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps/chunk-PF6LNL77.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps/chunk-PF6LNL77.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps/chunk-PF6LNL77.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps/chunk-RVBEVKPN.js" beforeDir="false" afterPath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps/chunk-RVBEVKPN.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps/chunk-RVBEVKPN.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps/chunk-RVBEVKPN.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps/chunk-UP3664T6.js" beforeDir="false" afterPath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps/chunk-UP3664T6.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps/chunk-UP3664T6.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps/chunk-UP3664T6.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps/chunk-X2IV5WZ2.js" beforeDir="false" afterPath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps/chunk-X2IV5WZ2.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps/chunk-X2IV5WZ2.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps/chunk-X2IV5WZ2.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps/chunk-ZZ5HLOIY.js" beforeDir="false" afterPath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps/chunk-ZZ5HLOIY.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps/chunk-ZZ5HLOIY.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps/chunk-ZZ5HLOIY.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps/rxjs.js" beforeDir="false" afterPath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps/rxjs.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps/rxjs.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps/rxjs.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps_ssr/@angular_common.js" beforeDir="false" afterPath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps_ssr/@angular_common.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps_ssr/@angular_common.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps_ssr/@angular_common.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps_ssr/@angular_common_http.js" beforeDir="false" afterPath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps_ssr/@angular_common_http.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps_ssr/@angular_common_http.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps_ssr/@angular_common_http.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps_ssr/@angular_core.js" beforeDir="false" afterPath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps_ssr/@angular_core.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps_ssr/@angular_core.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps_ssr/@angular_core.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps_ssr/@angular_forms.js" beforeDir="false" afterPath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps_ssr/@angular_forms.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps_ssr/@angular_forms.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps_ssr/@angular_forms.js.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps_ssr/@angular_material_button.js" beforeDir="false" afterPath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps_ssr/@angular_material_button.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps_ssr/@angular_material_button.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps_ssr/@angular_material_button.js.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps_ssr/@angular_material_core.js" beforeDir="false" afterPath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps_ssr/@angular_material_core.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps_ssr/@angular_material_core.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps_ssr/@angular_material_core.js.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps_ssr/@angular_material_datepicker.js" beforeDir="false" afterPath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps_ssr/@angular_material_datepicker.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps_ssr/@angular_material_datepicker.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps_ssr/@angular_material_datepicker.js.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps_ssr/@angular_material_divider.js" beforeDir="false" afterPath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps_ssr/@angular_material_divider.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps_ssr/@angular_material_divider.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps_ssr/@angular_material_divider.js.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps_ssr/@angular_material_form-field.js" beforeDir="false" afterPath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps_ssr/@angular_material_form-field.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps_ssr/@angular_material_form-field.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps_ssr/@angular_material_form-field.js.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps_ssr/@angular_material_icon.js" beforeDir="false" afterPath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps_ssr/@angular_material_icon.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps_ssr/@angular_material_icon.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps_ssr/@angular_material_icon.js.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps_ssr/@angular_material_input.js" beforeDir="false" afterPath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps_ssr/@angular_material_input.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps_ssr/@angular_material_input.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps_ssr/@angular_material_input.js.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps_ssr/@angular_material_menu.js" beforeDir="false" afterPath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps_ssr/@angular_material_menu.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps_ssr/@angular_material_menu.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps_ssr/@angular_material_menu.js.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps_ssr/@angular_material_paginator.js" beforeDir="false" afterPath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps_ssr/@angular_material_paginator.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps_ssr/@angular_material_paginator.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps_ssr/@angular_material_paginator.js.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps_ssr/@angular_material_select.js" beforeDir="false" afterPath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps_ssr/@angular_material_select.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps_ssr/@angular_material_select.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps_ssr/@angular_material_select.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps_ssr/@angular_material_snack-bar.js" beforeDir="false" afterPath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps_ssr/@angular_material_snack-bar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps_ssr/@angular_material_snack-bar.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps_ssr/@angular_material_snack-bar.js.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps_ssr/@angular_material_table.js" beforeDir="false" afterPath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps_ssr/@angular_material_table.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps_ssr/@angular_material_table.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps_ssr/@angular_material_table.js.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps_ssr/@angular_material_toolbar.js" beforeDir="false" afterPath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps_ssr/@angular_material_toolbar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps_ssr/@angular_material_toolbar.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps_ssr/@angular_material_toolbar.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps_ssr/@angular_platform-browser.js" beforeDir="false" afterPath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps_ssr/@angular_platform-browser.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps_ssr/@angular_platform-browser.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps_ssr/@angular_platform-browser.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps_ssr/@angular_platform-browser_animations_async.js" beforeDir="false" afterPath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps_ssr/@angular_platform-browser_animations_async.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps_ssr/@angular_platform-browser_animations_async.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps_ssr/@angular_platform-browser_animations_async.js.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps_ssr/@angular_platform-server.js" beforeDir="false" afterPath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps_ssr/@angular_platform-server.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps_ssr/@angular_platform-server.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps_ssr/@angular_platform-server.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps_ssr/@angular_router.js" beforeDir="false" afterPath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps_ssr/@angular_router.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps_ssr/@angular_router.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps_ssr/@angular_router.js.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps_ssr/_metadata.json" beforeDir="false" afterPath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps_ssr/_metadata.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps_ssr/chunk-3BM7BUXN.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps_ssr/chunk-3BM7BUXN.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps_ssr/chunk-ASXKT66N.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps_ssr/chunk-ASXKT66N.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps_ssr/chunk-HZFWVG7T.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps_ssr/chunk-HZFWVG7T.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps_ssr/chunk-IFEMF25C.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps_ssr/chunk-IFEMF25C.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps_ssr/chunk-MVASYTF6.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps_ssr/chunk-MVASYTF6.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps_ssr/chunk-PILFWGBH.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps_ssr/chunk-PILFWGBH.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps_ssr/chunk-TY4JLIPH.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps_ssr/chunk-TY4JLIPH.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontVP/src/app/app.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../frontVP/src/app/app.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps_ssr/browser-CWCU5H7E.js" beforeDir="false" afterPath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps_ssr/browser-CWCU5H7E.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps_ssr/browser-CWCU5H7E.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps_ssr/browser-CWCU5H7E.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps_ssr/chunk-2H3L6IVL.js" beforeDir="false" afterPath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps_ssr/chunk-2H3L6IVL.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps_ssr/chunk-2H3L6IVL.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps_ssr/chunk-2H3L6IVL.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps_ssr/chunk-53XMI567.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps_ssr/chunk-53XMI567.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps_ssr/chunk-54MCGBWC.js" beforeDir="false" afterPath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps_ssr/chunk-54MCGBWC.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps_ssr/chunk-54MCGBWC.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps_ssr/chunk-54MCGBWC.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps_ssr/chunk-5MBXMD3A.js" beforeDir="false" afterPath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps_ssr/chunk-5MBXMD3A.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps_ssr/chunk-5MBXMD3A.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps_ssr/chunk-5MBXMD3A.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps_ssr/chunk-63F4ZYSE.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps_ssr/chunk-63F4ZYSE.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps_ssr/chunk-7FHUYHKD.js" beforeDir="false" afterPath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps_ssr/chunk-7FHUYHKD.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps_ssr/chunk-7FHUYHKD.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps_ssr/chunk-7FHUYHKD.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps_ssr/chunk-BF2IJN4L.js" beforeDir="false" afterPath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps_ssr/chunk-BF2IJN4L.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps_ssr/chunk-BF2IJN4L.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps_ssr/chunk-BF2IJN4L.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps_ssr/chunk-DQZ2PILJ.js" beforeDir="false" afterPath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps_ssr/chunk-DQZ2PILJ.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps_ssr/chunk-DQZ2PILJ.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps_ssr/chunk-DQZ2PILJ.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps_ssr/chunk-HUK4ZYBK.js" beforeDir="false" afterPath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps_ssr/chunk-HUK4ZYBK.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps_ssr/chunk-HUK4ZYBK.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps_ssr/chunk-HUK4ZYBK.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps_ssr/chunk-NBDRSUDG.js" beforeDir="false" afterPath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps_ssr/chunk-NBDRSUDG.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps_ssr/chunk-NBDRSUDG.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps_ssr/chunk-NBDRSUDG.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps_ssr/chunk-NLAQVFGP.js" beforeDir="false" afterPath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps_ssr/chunk-NLAQVFGP.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps_ssr/chunk-NLAQVFGP.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps_ssr/chunk-NLAQVFGP.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps_ssr/chunk-NQ4HTGF6.js" beforeDir="false" afterPath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps_ssr/chunk-NQ4HTGF6.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps_ssr/chunk-NQ4HTGF6.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps_ssr/chunk-NQ4HTGF6.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps_ssr/chunk-P476YUUD.js" beforeDir="false" afterPath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps_ssr/chunk-P476YUUD.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps_ssr/chunk-P476YUUD.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps_ssr/chunk-P476YUUD.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps_ssr/chunk-PB2PBMVQ.js" beforeDir="false" afterPath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps_ssr/chunk-PB2PBMVQ.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps_ssr/chunk-PB2PBMVQ.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps_ssr/chunk-PB2PBMVQ.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps_ssr/chunk-TKQWSO4T.js" beforeDir="false" afterPath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps_ssr/chunk-TKQWSO4T.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps_ssr/chunk-TKQWSO4T.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps_ssr/chunk-TKQWSO4T.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps_ssr/chunk-UJW43TT6.js" beforeDir="false" afterPath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps_ssr/chunk-UJW43TT6.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps_ssr/chunk-UJW43TT6.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps_ssr/chunk-UJW43TT6.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps_ssr/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps_ssr/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps_ssr/rxjs.js" beforeDir="false" afterPath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps_ssr/rxjs.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps_ssr/rxjs.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps_ssr/rxjs.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps_ssr/xhr2-ISERFGGE.js" beforeDir="false" afterPath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps_ssr/xhr2-ISERFGGE.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps_ssr/xhr2-ISERFGGE.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/../frontVP/.angular/cache/18.2.10/frontVP/vite/deps_ssr/xhr2-ISERFGGE.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontVP/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../frontVP/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontVP/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../frontVP/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../frontVP/src/app/app.routes.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../frontVP/src/app/app.routes.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontVP/src/app/components/event-type/creaeditaevent-type/creaeditaevent-type.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../frontVP/src/app/components/event-type/creaeditaevent-type/creaeditaevent-type.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontVP/src/app/components/event-type/creaeditaevent-type/creaeditaevent-type.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../frontVP/src/app/components/event-type/creaeditaevent-type/creaeditaevent-type.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontVP/src/app/components/event-type/listarevent-type/listarevent-type.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../frontVP/src/app/components/event-type/listarevent-type/listarevent-type.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontVP/src/app/components/event-type/listarevent-type/listarevent-type.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../frontVP/src/app/components/event-type/listarevent-type/listarevent-type.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontVP/src/app/components/event/creaeditaevent/creaeditaevent.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../frontVP/src/app/components/event/creaeditaevent/creaeditaevent.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontVP/src/app/components/event/creaeditaevent/creaeditaevent.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../frontVP/src/app/components/event/creaeditaevent/creaeditaevent.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontVP/src/app/components/event/listarevent/listarevent.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../frontVP/src/app/components/event/listarevent/listarevent.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontVP/src/app/components/event/listarevent/listarevent.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../frontVP/src/app/components/event/listarevent/listarevent.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontVP/src/app/components/role/creaeditarole/creaeditarole.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/../frontVP/src/app/components/role/creaeditarole/creaeditarole.component.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontVP/src/app/components/role/creaeditarole/creaeditarole.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../frontVP/src/app/components/role/creaeditarole/creaeditarole.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontVP/src/app/components/role/creaeditarole/creaeditarole.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../frontVP/src/app/components/role/creaeditarole/creaeditarole.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontVP/src/app/components/role/listarrole/listarrole.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/../frontVP/src/app/components/role/listarrole/listarrole.component.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontVP/src/app/components/role/listarrole/listarrole.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../frontVP/src/app/components/role/listarrole/listarrole.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontVP/src/app/components/role/listarrole/listarrole.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../frontVP/src/app/components/role/listarrole/listarrole.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontVP/src/app/components/user/creaeditauser/creaeditauser.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/../frontVP/src/app/components/user/creaeditauser/creaeditauser.component.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontVP/src/app/components/user/creaeditauser/creaeditauser.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../frontVP/src/app/components/user/creaeditauser/creaeditauser.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontVP/src/app/components/user/creaeditauser/creaeditauser.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../frontVP/src/app/components/user/creaeditauser/creaeditauser.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontVP/src/app/components/user/listaruser/listaruser.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/../frontVP/src/app/components/user/listaruser/listaruser.component.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontVP/src/app/components/user/listaruser/listaruser.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../frontVP/src/app/components/user/listaruser/listaruser.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontVP/src/app/components/user/listaruser/listaruser.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../frontVP/src/app/components/user/listaruser/listaruser.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontVP/src/app/models/event.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontVP/src/app/models/role.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../frontVP/src/app/models/role.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontVP/src/app/services/event-type.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../frontVP/src/app/services/event-type.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontVP/src/app/services/event.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../frontVP/src/app/services/event.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontVP/src/app/services/role.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../frontVP/src/app/services/role.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontVP/src/app/services/user.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../frontVP/src/app/services/user.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontVP/src/app/services/appointment.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../frontVP/src/app/services/appointment.service.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
@@ -132,26 +217,26 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "Spring Boot.Vpg04Application.executor": "Run",
-    "git-widget-placeholder": "bryan",
-    "ignore.virus.scanning.warn.message": "true",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/Temporal/Documents/VP/v2/VG04_back_w-0Security-master",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;Spring Boot.Vpg04Application.executor&quot;: &quot;Run&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;bryan&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Temporal/Documents/VPV2/ArqWebG4-main&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\JHULISA\Documents\Codigos\VG04_back_w-0Security-master\src\main\java\pe\edu\upc\vpg04" />
@@ -210,7 +295,9 @@
       <workItem from="1731507942407" duration="6358000" />
       <workItem from="1731568878786" duration="987000" />
       <workItem from="1731614675944" duration="12897000" />
-      <workItem from="1731683152622" duration="4573000" />
+      <workItem from="1731683152622" duration="6417000" />
+      <workItem from="1731711784397" duration="8696000" />
+      <workItem from="1731768747425" duration="506000" />
     </task>
     <servers />
   </component>

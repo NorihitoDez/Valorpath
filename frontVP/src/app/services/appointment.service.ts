@@ -3,6 +3,8 @@ import { environment } from '../../environments/environment';
 import { Observable, Subject } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 import { Appointment } from '../models/appointment';
+import { AppointmentbyDateDTO } from '../models/appointmentbyDateDTO';
+import { CancelledAppointmentsDTO } from '../models/cancelledAppointmentsDTO';
 
 const base = environment.base;
 @Injectable({
@@ -37,4 +39,15 @@ export class AppointmentService {
     return this.http.delete(`${this.url}/${id}`);
   }
 
+  getAppointmentsByDate(date: Date): Observable<AppointmentbyDateDTO[]> {
+    const formattedDate = date.toISOString().split('T')[0]; // Formatear fecha como YYYY-MM-DD
+    return this.http.get<AppointmentbyDateDTO[]>(`${this.url}/citasporfechas`, {
+      params: { date1: formattedDate }, 
+    });
+  }
+
+  getCancelledAppointments(): Observable<CancelledAppointmentsDTO[]> {
+    return this.http.get<CancelledAppointmentsDTO[]>(`${this.url}/citasCanceladas`);
+  }
+  
 }

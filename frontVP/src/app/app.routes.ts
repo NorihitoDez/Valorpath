@@ -17,6 +17,9 @@ import { Component } from '@angular/core';
 import { PostCreaeditaComponent } from './components/post/post-creaedita/post-creaedita.component';
 import { AppointmentComponent } from './components/appointment/appointment.component';
 import { AppointmentCreaeditaComponent } from './components/appointment/appointment-creaedita/appointment-creaedita.component';
+import { ReportesComponent } from './components/reportes/reportes.component';
+import { CitasaporfechaComponent } from './components/reportes/citasporfecha/citasaporfecha.component';
+import { CitascanceladasComponent } from './components/reportes/citascanceladas/citascanceladas.component';
 
 
 export class StaticLandingComponent {}
@@ -122,6 +125,20 @@ export const routes: Routes = [
       {
         path:'ediciones/:id',
         component:AppointmentCreaeditaComponent
+      }
+    ]
+  },
+  {
+    path:'reportes',
+    component:ReportesComponent,
+    children:[
+      {
+        path:'citasporfecha',
+        component: CitasaporfechaComponent
+      },
+      {
+        path:'citascanceladas',
+        component: CitascanceladasComponent
       }
     ]
   }
