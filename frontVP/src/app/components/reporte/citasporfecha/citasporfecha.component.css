@@ -1,0 +1,92 @@
+/* Estilo general para el contenedor */
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Encabezado principal */
+  h1 {
+    font-weight: bold;
+    font-size: 2rem;
+  }
+  
+  /* Input de fecha */
+  #appointmentDate {
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    transition: box-shadow 0.3s ease;
+  }
+  
+  #appointmentDate:focus {
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.8);
+    border-color: #007bff;
+  }
+  
+  /* Botón de filtrar */
+  button.btn-primary {
+    background-color: #007bff;
+    border: none;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  button.btn-primary:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+  }
+  
+  /* Cards */
+  .card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .card:hover {
+    transform: scale(1.03);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+  }
+  
+  .card-body {
+    padding: 20px;
+    background-color: #ffffff;
+  }
+  
+  .card-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+  
+  .card-footer {
+    background-color: #f8f9fa;
+    border-top: 1px solid #ddd;
+  }
+  
+  /* Botones en las tarjetas */
+  .btn-outline-primary {
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  .btn-outline-primary:hover {
+    background-color: #007bff;
+    color: white;
+  }
+  
+  .btn-outline-danger {
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  .btn-outline-danger:hover {
+    background-color: #dc3545;
+    color: white;
+  }
+  
+  /* Mensaje cuando no hay citas */
+  .text-muted {
+    font-style: italic;
+    color: #6c757d;
+  }
+  

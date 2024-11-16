@@ -3,11 +3,11 @@ import {
   DomSanitizer
 } from "./chunk-GSK4ZWE4.js";
 import {
-  MatCommonModule
-} from "./chunk-7U4NAHES.js";
-import {
   HttpClient
 } from "./chunk-5ER7ELIN.js";
+import {
+  MatCommonModule
+} from "./chunk-7U4NAHES.js";
 import {
   DOCUMENT
 } from "./chunk-GO5TBSVD.js";

@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { ActivatedRoute, RouterOutlet } from '@angular/router';
 import { QuantityforumxpsyComponent } from "./quantityforumxpsy/quantityforumxpsy.component";
+import { CitasporfechaComponent } from './citasporfecha/citasporfecha.component';
 
 @Component({
   selector: 'app-reporte',

@@ -21,12 +21,14 @@ import { seguridadGuard } from "./guard/seguridad.guard";
 import { HomeComponent } from "./components/home/home.component";
 import { RegisterComponent } from "./components/register/register.component";
 import { LandingComponent } from "./components/landing/landing.component";
+import { CitasporfechaComponent } from "./components/reporte/citasporfecha/citasporfecha.component";
+import { CitascanceladasComponent } from "./components/reporte/citascanceladas/citascanceladas.component";
 //export class StaticLandingComponent {}
 
 export const routes: Routes = [
   {
     path: '',
-    redirectTo: 'landing',
+    redirectTo: 'login',
     pathMatch: 'full',
   },
   {
@@ -94,18 +96,6 @@ export const routes: Routes = [
     canActivate: [seguridadGuard],
   },
   {
-    path:'reportes',
-    component: ReporteComponent,
-    children:[
-      {
-        path:"mostActiveForum",
-        component:MostactiveforumComponent
-      }
-    ],
-    canActivate: [seguridadGuard],
-    
-  },
-  {
     path:'citas',
     component:AppointmentComponent,
     children:[
@@ -165,5 +155,26 @@ export const routes: Routes = [
       }
     ],
     canActivate: [seguridadGuard],
+  },
+  {
+    path:'reportes',
+    component: ReporteComponent,
+    children:[
+      {
+        path:"mostActiveForum",
+        component:MostactiveforumComponent,
+        
+      },
+      {
+        path:'citasporfecha',
+        component: CitasporfechaComponent
+      },
+      {
+        path:'citascanceladas',
+        component: CitascanceladasComponent
+      }
+    ],
+    canActivate: [seguridadGuard],
+    
   },
 ];

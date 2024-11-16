@@ -1,0 +1,58 @@
+/* Contenedor principal */
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Encabezado */
+  h1 {
+    font-weight: bold;
+  }
+  
+  /* Cards */
+  .card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .card:hover {
+    transform: scale(1.03);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+  }
+  
+  .card-body {
+    padding: 20px;
+    background-color: #fff;
+  }
+  
+  .card-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+  
+  .card-footer {
+    background-color: #f8f9fa;
+    border-top: 1px solid #ddd;
+  }
+  
+  /* Botón en la tarjeta */
+  .btn-outline-secondary {
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  .btn-outline-secondary:hover {
+    background-color: #6c757d;
+    color: white;
+  }
+  
+  /* Mensaje cuando no hay citas */
+  .text-muted {
+    font-style: italic;
+    color: #6c757d;
+  }
+  

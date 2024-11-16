@@ -15,11 +15,11 @@ import {
   EVENT_MANAGER_PLUGINS,
   EventManagerPlugin
 } from "./chunk-GSK4ZWE4.js";
-import "./chunk-Z4HELEES.js";
 import {
   HTTP_ROOT_INTERCEPTOR_FNS,
   HttpClientModule
 } from "./chunk-5ER7ELIN.js";
+import "./chunk-Z4HELEES.js";
 import {
   DOCUMENT,
   NullViewportScroller,

@@ -1,0 +1,37 @@
+<div class="container my-4">
+    <h1 class="text-center mb-4 text-primary">Lista de Citas</h1>
+  
+    <!-- Datepicker para seleccionar la fecha -->
+    <div class="d-flex justify-content-between align-items-center mb-3">
+      <label for="appointmentDate" class="form-label fs-5">Seleccionar Fecha:</label>
+      <input
+        type="date"
+        id="appointmentDate"
+        class="form-control w-50 shadow-sm"
+        [(ngModel)]="selectedDate"
+        (change)="fetchAppointments()"
+      />
+    </div>
+  
+    <!-- Cards de citas -->
+    <div class="row mt-4">
+      <div class="col-md-4 mb-3" *ngFor="let appointment of appointments">
+        <div class="card shadow-sm rounded">
+          <div class="card-body">
+            <h5 class="card-title text-primary text-center">Cita</h5>
+            <p class="card-text">
+              <strong>Psicólogo ID:</strong> {{ appointment.psychologyId }}<br />
+              <strong>Veterano ID:</strong> {{ appointment.veteranId }}<br />
+              <strong>Fecha:</strong> {{ appointment.appointmentDate | date: 'dd-MM-yyyy' }}
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <!-- Mensaje cuando no hay citas -->
+    <div *ngIf="appointments.length === 0" class="text-center mt-4">
+      <p class="text-muted">No hay citas disponibles para esta fecha.</p>
+    </div>
+  </div>
+  

@@ -1,0 +1,26 @@
+<div class="container my-4">
+    <h1 class="text-center mb-4 text-danger">Citas Canceladas</h1>
+  
+    <div class="row">
+      <div class="col-md-4 mb-4" *ngFor="let appointment of cancelledAppointments">
+        <div class="card shadow-sm rounded">
+          <div class="card-body">
+            <h5 class="card-title text-danger text-center">Cita Cancelada</h5>
+            <p class="card-text">
+              <strong>ID Cita:</strong> {{ appointment.idAppointment }}<br />
+              <strong>Nombre:</strong> {{ appointment.status }}<br />
+              <strong>Fecha:</strong> {{ appointment.appointmentDate | date: 'dd-MM-yyyy' }}<br />
+              <strong>Estado:</strong> {{ appointment.name }}<br />
+              <strong>Psicólogo:</strong> {{ appointment.psychologyLastname }}<br />
+              <strong>Veterano:</strong> {{ appointment.veteranLastname }}
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <div *ngIf="cancelledAppointments.length === 0" class="text-center mt-4">
+      <p class="text-muted">No hay citas canceladas disponibles.</p>
+    </div>
+  </div>
+  
