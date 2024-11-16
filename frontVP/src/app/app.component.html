@@ -1,12 +1,11 @@
 <!--PARA EL INICO DE SECICON-->
 <mat-toolbar class="custom-toolbar" *ngIf="verificar()">
   <button mat-button class="toolbar-button logo-button">
-    <img src="assets/images/logo.png" alt="Logo" class="logo-image">
   </button>
   <div class="left-menu">
     <!-- Opciones para el Administrador -->
     <ng-container *ngIf="isAdmin()">
-      <button mat-button [matMenuTriggerFor]="menuUser" class="toolbar-button">
+      <button mat-button [matMenuTriggerFor]="menuUusario" class="toolbar-button">
         <mat-icon class="icon-style">person</mat-icon>Usuarios
       </button>
       <button mat-button [matMenuTriggerFor]="menuRole" class="toolbar-button">
@@ -21,10 +20,11 @@
       <button mat-button [matMenuTriggerFor]="menuForum" class="toolbar-button">
         <mat-icon class="icon-style">forum</mat-icon>Foros
       </button>
-      <button mat-button [matMenuTriggerFor]="menuUser" class="toolbar-button">
+      <!--FALTA LO DE RECURSOS XZ EOS LO DEJO EN BLANCO-->
+      <button mat-button [matMenuTriggerFor]="menuRole" class="toolbar-button">
         <mat-icon class="icon-style">library_books</mat-icon>Recursos
       </button>
-      <button mat-button [matMenuTriggerFor]="menuUser" class="toolbar-button">
+      <button mat-button [matMenuTriggerFor]="menuPost" class="toolbar-button">
         <mat-icon class="icon-style">edit</mat-icon>Post
       </button>
       <button mat-button [matMenuTriggerFor]="menuReportes" class="toolbar-button">
@@ -46,10 +46,11 @@
       <button mat-button [matMenuTriggerFor]="menuForum" class="toolbar-button">
         <mat-icon class="icon-style">forum</mat-icon>Foros
       </button>
-      <button mat-button [matMenuTriggerFor]="menuUser" class="toolbar-button">
+      <!--SAME HERE LA PARTE DE RERUSOSO ->CHANGE MENU-->
+      <button mat-button [matMenuTriggerFor]="menuRole" class="toolbar-button">
         <mat-icon class="icon-style">library_books</mat-icon>Recursos
       </button>
-      <button mat-button [matMenuTriggerFor]="menuUser" class="toolbar-button">
+      <button mat-button [matMenuTriggerFor]="menuPost" class="toolbar-button">
         <mat-icon class="icon-style">edit</mat-icon>Post
       </button>
       
@@ -65,10 +66,11 @@
       <button mat-button [matMenuTriggerFor]="menuForum" class="toolbar-button">
         <mat-icon class="icon-style">forum</mat-icon>Foros
       </button>
-      <button mat-button [matMenuTriggerFor]="menuUser" class="toolbar-button">
+      <!--SME HERE LA PARTE DE RECURSOS-->
+      <button mat-button [matMenuTriggerFor]="menuRole" class="toolbar-button">
         <mat-icon class="icon-style">library_books</mat-icon>Recursos
       </button>
-      <button mat-button [matMenuTriggerFor]="menuUser" class="toolbar-button">
+      <button mat-button [matMenuTriggerFor]="menuPost" class="toolbar-button">
         <mat-icon class="icon-style">edit</mat-icon>Post
       </button>
     </ng-container>
@@ -76,7 +78,7 @@
 
   <div class="right-menu">
     <button mat-button [matMenuTriggerFor]="menuSalir" style="color: rgb(0, 0, 0)">
-      <mat-icon>person</mat-icon>Usuario
+      <mat-icon>person</mat-icon>Perfil
     </button>
     <button mat-button [routerLink]="['/homes']" style="color: rgb(0, 0, 0)">
       <mat-icon>home</mat-icon>Home
@@ -85,7 +87,7 @@
 </mat-toolbar>
 
  <!--para seleccioanr opc. usuarios-->
-<mat-menu #menuUusarios="matMenu">
+<mat-menu #menuUusario="matMenu">
   <button mat-menu-item routerLink="/usuarios" class="menu-item">Listar usuarios</button>
   <button mat-menu-item routerLink="/usuarios/nuevo" class="menu-item">
     Registrar un usuario
@@ -125,7 +127,7 @@
 </mat-menu>
  <!--para seleccioanr opc. posts-->
 
- <mat-menu #menuUser="matMenu">
+ <mat-menu #menuPost="matMenu">
   <button mat-menu-item routerLink="/posts" class="menu-item">Listar posts</button>
   <button mat-menu-item routerLink="/posts/nuevo" class="menu-item">
     Registrar un post
@@ -142,7 +144,7 @@
     <span>{{ role }}</span>
   </button>
   <button mat-menu-item class="custom-menu-item"> 
-    Usuario:
+    Nombre:
     <span>{{ username }}</span>
   </button>
 </mat-menu>
