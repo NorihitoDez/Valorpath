@@ -21,13 +21,12 @@ import { NgIf } from '@angular/common';
     MatIconModule,
     MatFormFieldModule,
     RouterLink,
-    NgIf
+    NgIf,
   ],
   templateUrl: './user-listar.component.html',
   styleUrl: './user-listar.component.css',
 })
 export class UserListarComponent implements OnInit {
-
   dataSource: MatTableDataSource<User> = new MatTableDataSource();
   @ViewChild(MatPaginator) paginator!: MatPaginator;
 
@@ -46,14 +45,14 @@ export class UserListarComponent implements OnInit {
     'editar',
   ];
 
-  mensaje: string = "";
+  mensaje: string = '';
   constructor(private uS: UserService) {}
   ngOnInit(): void {
     this.uS.list().subscribe((data) => {
       this.dataSource = new MatTableDataSource(data);
       this.dataSource.paginator = this.paginator;
     });
-    this.uS.getList().subscribe((data) => { 
+    this.uS.getList().subscribe((data) => {
       this.dataSource = new MatTableDataSource(data);
     });
   }
@@ -62,8 +61,7 @@ export class UserListarComponent implements OnInit {
       .delete(id)
       .pipe(
         catchError((error) => {
-          this.mensaje =
-            "No se puede eliminar, tiene datos";
+          this.mensaje = 'No se puede eliminar, tiene datos';
           this.ocultarMensaje();
           return of(null);
         })
@@ -76,7 +74,7 @@ export class UserListarComponent implements OnInit {
   }
   ocultarMensaje() {
     setTimeout(() => {
-      this.mensaje = "";
+      this.mensaje = '';
     }, 3000);
   }
 }

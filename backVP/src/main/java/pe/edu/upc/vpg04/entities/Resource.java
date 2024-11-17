@@ -9,10 +9,10 @@ public class Resource {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int idrecurso;
-    @Column(name = "autor", length = 50, nullable = false)
-    private String Autor;
+    @Column(name = "autor", length = 400, nullable = false)
+    private String autor;
     @Column(name = "tipo", length = 400, nullable = false)
-    private String Tipo;
+    private String tipo;
     @Column(name = "nombre", length = 400, nullable = false)
     private String nombre;
     @Column(name = "descripcion", length = 400, nullable = false)
@@ -21,10 +21,10 @@ public class Resource {
     public Resource() {
     }
 
-    public Resource(int idrecurso, String autor, String tipo, String nombre, String descripcion, Users use) {
+    public Resource(int idrecurso, String autor, String tipo, String nombre, String descripcion) {
         this.idrecurso = idrecurso;
-        Autor = autor;
-        Tipo = tipo;
+        this.autor = autor;
+        this.tipo = tipo;
         this.nombre = nombre;
         this.descripcion = descripcion;
     }
@@ -38,19 +38,19 @@ public class Resource {
     }
 
     public String getAutor() {
-        return Autor;
+        return autor;
     }
 
     public void setAutor(String autor) {
-        Autor = autor;
+        this.autor = autor;
     }
 
     public String getTipo() {
-        return Tipo;
+        return tipo;
     }
 
     public void setTipo(String tipo) {
-        Tipo = tipo;
+        this.tipo = tipo;
     }
 
     public String getNombre() {

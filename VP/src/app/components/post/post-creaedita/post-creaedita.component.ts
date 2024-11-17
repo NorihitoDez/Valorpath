@@ -64,11 +64,11 @@ export class PostCreaeditaComponent implements OnInit {
 
     this.form = this.formBuil.group({
       codigo: [''],
-      titulo: ['', Validators.required],
-      fecha: ['', Validators.required],
-      comentario: ['', Validators.required],
-      usuario: ['', Validators.required],
-      foro: ['', Validators.required],
+      titulo: ["", Validators.required],
+      fecha: ["", Validators.required],
+      comentario: ["", Validators.required],
+      usuario: ["", Validators.required],
+      foro: ["", Validators.required],
     });
 
     this.uS.listarPorRol('VETERANO').subscribe((data) => {

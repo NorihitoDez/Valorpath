@@ -15,6 +15,8 @@ import { RecursosComponent } from './components/recursos/recursos.component';
 import { CreaeditarecursosComponent } from './components/recursos/creaeditarecursos/creaeditarecursos.component';
 import { UsorecursoComponent } from './components/usorecurso/usorecurso.component';
 import { CreaeditausoComponent } from './components/usorecurso/creaeditauso/creaeditauso.component';
+import { ReportsUsorecursoComponent } from './components/reports/reports-usorecurso/reports-usorecurso.component';
+
 
 export const routes: Routes = [
   {
@@ -88,7 +90,7 @@ export const routes: Routes = [
     ],
   },
   {
-    path:'recursos',
+    path:'rutatemporal',
     component: RecursosComponent,
     children:[
       {
@@ -120,6 +122,9 @@ export const routes: Routes = [
     children:[
       {
         path:'cantidad',component:ReportsPostComponent
+      },
+      {
+        path:'entrefechas',component:ReportsUsorecursoComponent
       }
     ]
   }

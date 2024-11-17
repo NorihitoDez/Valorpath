@@ -16,13 +16,18 @@
           <td mat-cell *matCellDef="let element">{{ element.fecha }}</td>
         </ng-container>
   
-        <!-- Weight Column -->
+
         <ng-container matColumnDef="recurso">
           <th mat-header-cell *matHeaderCellDef>Recurso</th>
           <td mat-cell *matCellDef="let element">{{ element.recurso.nombre }}</td>
         </ng-container>
+
+        <ng-container matColumnDef="tiporecurso">
+          <th mat-header-cell *matHeaderCellDef>Tipo de Recurso</th>
+          <td mat-cell *matCellDef="let element">{{ element.recurso.tipo}}</td>
+        </ng-container>
   
-        <!-- Symbol Column -->
+
         <ng-container matColumnDef="usuario">
           <th mat-header-cell *matHeaderCellDef>Username</th>
           <td mat-cell *matCellDef="let element">{{ element.usuario.username }}</td>
@@ -39,6 +44,18 @@
         aria-label="Select page of periodic elements"
       >
       </mat-paginator>
+      <div *ngIf="recursoMenosUtilizado && recursoMenosUtilizado.length > 0">
+        <h3>Recurso(s) menos utilizado(s):</h3>
+        <ul>
+          <li *ngFor="let recurso of recursoMenosUtilizado">
+            {{ recurso.tiporecurso }} con {{ recurso.totalusos }} uso(s)
+          </li>
+        </ul>
+      </div>
+      <div *ngIf="recursoMenosUtilizado.length === 0">
+        <p>No hay recursos menos utilizados.</p>
+      </div>
+      
     </div>
   </div>
   

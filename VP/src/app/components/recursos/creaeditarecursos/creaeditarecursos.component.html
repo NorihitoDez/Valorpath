@@ -1,63 +1,57 @@
 <div class="container">
-    <h2>Registro de recursos</h2>
-    <form [formGroup]="form" (submit)="aceptar()">
-      
-      <mat-form-field class="example-full-width" *ngIf="edicion">
-        <mat-label>Código</mat-label>
-        <input matInput placeholder="Id" formControlName="Id" />
-      </mat-form-field>
-  
-      <mat-form-field class="example-full-width">
-        <mat-label>Titulo</mat-label>
-        <input matInput placeholder="Nombre" formControlName="Nombre" />
-        <mat-error *ngIf="form.get('Nombre')?.hasError('required')">
-          El Nombre es obligatorio.
-        </mat-error>
-      </mat-form-field>
-  
-      <mat-form-field class="example-full-width">
-        <mat-label>Autor</mat-label>
-        <input matInput placeholder="Autor" formControlName="Autor" />
-        <mat-error *ngIf="form.get('Autor')?.hasError('required')">
-          El nombre del autor es obligatorios.
-        </mat-error>
-      </mat-form-field>
-      
-      <mat-form-field>
-        <mat-label>Tipo</mat-label>
-        <mat-select formControlName="Tipo" required>
-          <mat-option *ngFor="let tipo of Tipos" [value]="tipo">{{ tipo.value }}</mat-option>
-        </mat-select>
-        <mat-error *ngIf="form.get('Tipo')?.hasError('required')">
-          Seleccione un tipo de recurso
-        </mat-error>
-      </mat-form-field>
+  <h2>Registro de recursos</h2>
+  <form [formGroup]="form" (submit)="aceptar()">
+    <mat-form-field class="example-full-width" *ngIf="edicion">
+      <mat-label>Código</mat-label>
+      <input matInput placeholder="Id" formControlName="idrecurso" />
+    </mat-form-field>
 
-      
-      <mat-form-field>
-        <mat-label>Descripción</mat-label>
-        <textarea matInput formControlName="Descripcion" required></textarea>
-        <mat-error *ngIf="form.get('Descripcion')?.hasError('required')">
-          La descripción es obligatoria
-        </mat-error>
-        <mat-error *ngIf="form.get('Descripcion')?.hasError('minlength')">
-          La descripción debe tener al menos 5 caracteres
-        </mat-error>
-      </mat-form-field>
-   
-      <div>
-        <button mat-raised-button color="primary">Aceptar</button>
-        <button
-          mat-raised-button
-          color="warn"
-          routerLink="/recursos"
-          class="cancel"
-        >
-          Cancelar
-        </button>
-      </div>
-      
-  
-      <p>{{ mensaje }}</p>
-    </form>
-  </div>
+    <mat-form-field class="example-full-width">
+      <mat-label>Titulo</mat-label>
+      <input matInput placeholder="nombre" formControlName="nombre" />
+      <mat-error *ngIf="form.get('nombre')?.hasError('required')">
+        El Nombre es obligatorio.
+      </mat-error>
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width">
+      <mat-label>Autor</mat-label>
+      <input matInput placeholder="autor" formControlName="autor" />
+      <mat-error *ngIf="form.get('autor')?.hasError('required')">
+        El nombre del autor es obligatorios.
+      </mat-error>
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>Tipo</mat-label>
+      <mat-select formControlName="tipo" required>
+        <mat-option *ngFor="let tipo of Tipos" [value]="tipo.value">{{
+          tipo.viewValue
+        }}</mat-option>
+      </mat-select>
+      <mat-error *ngIf="form.get('tipo')?.hasError('required')">
+        Seleccione un tipo de recurso
+      </mat-error>
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>Descripción</mat-label>
+      <textarea matInput formControlName="descripcion" required></textarea>
+      <mat-error *ngIf="form.get('descripcion')?.hasError('required')">
+        La descripción es obligatoria
+      </mat-error>
+      <mat-error *ngIf="form.get('descripcion')?.hasError('minlength')">
+        La descripción debe tener al menos 5 caracteres
+      </mat-error>
+    </mat-form-field>
+
+    <div>
+      <button mat-raised-button color="primary" type="submit">Aceptar</button>
+      <button mat-raised-button color="warn" (click)="cancelar()" class="cancel">
+        Cancelar
+      </button>
+    </div>
+
+    <p>{{ mensaje }}</p>
+  </form>
+</div>

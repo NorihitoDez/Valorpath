@@ -16,7 +16,7 @@ import { MatDatepickerModule } from "@angular/material/datepicker";
 import { MatNativeDateModule } from "@angular/material/core";
 import { recursos } from "../../../models/recursos";
 import { RecursosService } from "../../../services/recursos.service";
-import { User } from "../../../models/user";
+
 
 
 @Component({
@@ -53,38 +53,44 @@ export class CreaeditarecursosComponent {
 
     private router: Router,
     private route: ActivatedRoute
-  ) {}
+  ) {this.route.params.subscribe(params => {
+    const id = params['id'];
+    console.log(id);});}
 
   ngOnInit(): void {
     this.route.params.subscribe((data: Params) => {
       this.id = data["id"];
       this.edicion = data["id"] != null;
+      
       this.init()
     });
     this.form = this.formBuild.group({
-      Autor: ['', Validators.required],
-      Nombre: ['', Validators.required],
-      Tipo: ['', Validators.required],
-      Descripcion: ["", Validators.required],
+      idrecurso: [''],
+      autor: ['', Validators.required],
+      nombre: ['', Validators.required],
+      tipo: ['', Validators.required],
+      descripcion: ['', Validators.required],
 
     });
   }
 
   aceptar(): void {
-    console.log("Formulario:", this.form.value);  // Imprimir valores del formulario
-  console.log("Validez:", this.form.valid);
+
     if (this.form.valid) {
       console.log('Formulario válido');
-      this.recursos.Autor = this.form.value.Autor;
-      this.recursos.Nombre = this.form.value.nombre;
-      this.recursos.Tipo=this.form.value.Tipo;
-      this.recursos.Descripcion=this.form.value.Descripcion;
+      this.recursos.idrecurso=this.form.value.idrecurso;
+      this.recursos.autor = this.form.value.autor;
+      this.recursos.nombre = this.form.value.nombre;
+      this.recursos.tipo=this.form.value.tipo;
+      this.recursos.descripcion=this.form.value.descripcion;
+
       if (this.edicion) {
-        this.rs.update(this.recursos).subscribe(() => {
+        this.rs.update(this.recursos).subscribe((data) => {
+          console.log('ID enviado para actualización:', this.recursos.idrecurso);
           this.rs.list().subscribe((data) => {
             this.rs.setList(data);
           });
-        });
+        },);
       } else {
         this.rs.insert(this.recursos).subscribe((data) => {
           this.rs.list().subscribe((data) => {
@@ -92,20 +98,23 @@ export class CreaeditarecursosComponent {
           });
         });
       }
-      this.router.navigate(['recursos']); // router  qme lleve a usuraios una vez dado click al aceptar
+      this.router.navigate(['rutatemporal']); // router  qme lleve a usuraios una vez dado click al aceptar
     } else {
       this.mensaje = 'Complete todos los campos, revise!!';
     }
   }
+  cancelar(): void {
+    this.router.navigate(['/rutatemporal']); 
+  }
   init() {
     if (this.edicion) {
       this.rs.listId(this.id).subscribe((data) => {
-        this.form = new FormGroup({
-          Id: new FormControl(data.idrecurso),
-          Autor: new FormControl(data.Autor),
-          Nombre: new FormControl(data.Nombre),
-          Tipo: new FormControl(data.Tipo),
-          Descripcion: new FormControl(data.Descripcion),
+        this.form.patchValue  ({
+          idrecurso: new FormControl(data.idrecurso),
+          autor: new FormControl(data.autor),
+          nombre: new FormControl(data.nombre),
+          tipo: new FormControl(data.tipo),
+          descripcion: new FormControl(data.descripcion),
         });
       });
     }

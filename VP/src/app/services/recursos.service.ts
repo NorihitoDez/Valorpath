@@ -9,7 +9,7 @@ const base = environment.base;
 })
 export class RecursosService {
 
-  private url = `${base}/recursos`;
+  private url = `${base}/rutatemporal`;
   private listaCambio = new Subject<recursos[]>();
   constructor(private http:HttpClient) { }
   //listar recursos
@@ -34,6 +34,6 @@ export class RecursosService {
     return this.http.put(this.url, r); 
   }
   delete(id: number)  {
-    return this.http.delete(`${this.url}/${id}`)
+    return this.http.delete(`${this.url}/eliminar/${id}`)
   }
 }

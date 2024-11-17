@@ -99,6 +99,7 @@ export class RolCreaeditaComponent implements OnInit {
       this.mensaje = 'Ingrese todos los campos!!';
     }
   }
+  
 
   obtenerControlCampo(nombreCampo: string): AbstractControl {
     const control = this.form.get(nombreCampo);

@@ -1,1 +1,53 @@
-<p>creaeditauso works!</p>
+<div class="container">
+    <h2>Registro de Usos</h2>
+    <form [formGroup]="form" (submit)="aceptar()">
+      
+  
+      <mat-form-field class="example-full-width">
+        <mat-label>Fecha de uso</mat-label>
+        <input
+          matInput
+          [matDatepicker]="picker"
+          formControlName="fecha"
+          placeholder="MM/DD/YYYY"
+        />
+        <mat-datepicker-toggle
+          matIconSuffix
+          [for]="picker"
+        ></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+        <mat-error *ngIf="form.get('fecha')?.hasError('required')">
+            La fecha es obligatoria.
+          </mat-error>
+      </mat-form-field>
+  
+      <mat-form-field>
+        <mat-label>Usuarios</mat-label>
+        <mat-select  formControlName="usuario">
+          @for (m of Listausuario; track m) {
+          <mat-option [value]="m.id">{{ m.username }}</mat-option>
+          }
+        </mat-select>
+      </mat-form-field>
+      
+      <mat-form-field>
+        <mat-label>Recursos</mat-label>
+        <mat-select  formControlName="recurso">
+          @for (m of Listarecurso; track m) {
+          <mat-option [value]="m.idrecurso">{{ m.nombre }}</mat-option>
+          }
+        </mat-select>
+      </mat-form-field>
+     
+  
+      <div class="button-container">
+        <button mat-raised-button color="primary">Aceptar</button>
+        <button mat-raised-button color="warn" (click)="cancelar()" class="cancel">
+          Cancelar
+        </button>
+      </div>
+  
+      <p>{{ mensaje }}</p>
+    </form>
+  </div>
+  

@@ -46,8 +46,8 @@
   </button>
 </mat-menu>
 <mat-menu #menuRecursos="matMenu">
-  <button mat-menu-item routerLink="/recursos">Listar</button>
-  <button mat-menu-item routerLink="/recursos/nuevo">Registrar</button>
+  <button mat-menu-item routerLink="/rutatemporal">Listar</button>
+  <button mat-menu-item routerLink="/rutatemporal/nuevo">Registrar</button>
   <button mat-menu-item routerLink="/usorecurso">Listar Usos</button>
 </mat-menu>
 <mat-menu #menuPost="matMenu">
@@ -63,5 +63,7 @@
     <mat-icon>pie_chart</mat-icon>Reporte Cantidad de Citas</button>
     <button mat-menu-item routerLink="/reportes/cantidad" class="custom-menu-item">
       <mat-icon> bar_chart</mat-icon>Reporte de la Cantidad de Post</button>
+      <button mat-menu-item routerLink="/reportes/entrefechas" class="custom-menu-item">
+        <mat-icon> bar_chart</mat-icon>Reporte uso de recurso entre fechas</button>
 </mat-menu>
 <router-outlet></router-outlet>

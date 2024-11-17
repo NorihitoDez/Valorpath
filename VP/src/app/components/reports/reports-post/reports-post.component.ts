@@ -1,7 +1,7 @@
-import { Component, OnInit } from '@angular/core';
 import { ChartDataset, ChartOptions, ChartType } from 'chart.js';
 import { BaseChartDirective } from 'ng2-charts';
 import { PostService } from '../../../services/post.service';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-reports-post',

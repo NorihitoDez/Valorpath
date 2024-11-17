@@ -42,7 +42,7 @@ public class ForumController {
         }).collect(Collectors.toList());
     }
 
-    @DeleteMapping("/eliminar/{id}")
+    @DeleteMapping("/{id}")
     //@PreAuthorize("hasAnyAuthority('PSICOLOGO')")
     public void eliminar(@PathVariable("id") Integer id) {
         fS.delete(id);

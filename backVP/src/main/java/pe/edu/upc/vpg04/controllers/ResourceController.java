@@ -3,21 +3,17 @@ package pe.edu.upc.vpg04.controllers;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
-import pe.edu.upc.vpg04.dtos.ForumDTO;
-import pe.edu.upc.vpg04.dtos.LessUsedResourceDTO;
-import pe.edu.upc.vpg04.dtos.MostUsebetweendateDTO;
+
 import pe.edu.upc.vpg04.dtos.ResourceDTO;
-import pe.edu.upc.vpg04.entities.Forum;
 import pe.edu.upc.vpg04.entities.Resource;
 import pe.edu.upc.vpg04.servicesinterfaces.IResourceService;
 
-import java.time.LocalDate;
-import java.util.ArrayList;
+
 import java.util.List;
 import java.util.stream.Collectors;
 
 @RestController
-@RequestMapping("/recursos")
+@RequestMapping("/rutatemporal")
 public class ResourceController {
 
     @Autowired
@@ -55,7 +51,7 @@ public class ResourceController {
         rS.delete(id);
     }
 
-    @GetMapping("/listar/{id}")
+    @GetMapping("/listarecurso/{id}")
     //@PreAuthorize("hasAnyAuthority('PSICOLOGO')")
     public ResourceDTO listarPorId(@PathVariable("id") Integer id) {
         ModelMapper m = new ModelMapper();
