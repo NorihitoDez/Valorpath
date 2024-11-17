@@ -13,9 +13,5 @@
       <button mat-button mat-raised-button color="primary" routerLink="/usorecurso/nuevo">Descargar</button>
       <button  mat-button mat-raised-button color="warn" (click)="eliminar(elemento.idrecurso)"><mat-icon>delete</mat-icon> Eliminar
       </button>
-      <button mat-button mat-raised-button color="accent" 
-          [routerLink]="['ediciones', elemento.idrecurso]">
-        <mat-icon>edit</mat-icon> Actualizar
-      </button>
     </mat-card-actions>
   </mat-card>
