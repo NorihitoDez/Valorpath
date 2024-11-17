@@ -7,86 +7,61 @@ import { catchError, of } from "rxjs";
 import { MatIconModule } from "@angular/material/icon";
 import { RouterModule } from "@angular/router";
 import { Router } from "@angular/router"; // Añadido para redirección
+import { MatCardModule } from "@angular/material/card";
+import { CommonModule } from "@angular/common";
+import { MatButtonModule } from "@angular/material/button";
 
 @Component({
   selector: "app-listarforum",
   standalone: true,
-  imports: [MatTableModule, MatPaginatorModule, MatIconModule, RouterModule],
+  imports: [
+    MatTableModule,
+    MatPaginatorModule,
+    MatIconModule,
+    RouterModule,
+    MatCardModule,
+    CommonModule,
+    MatButtonModule,
+  ],
   templateUrl: "./listarforum.component.html",
   styleUrl: "./listarforum.component.css",
 })
 export class ListarforumComponent implements OnInit {
   dataSource: MatTableDataSource<Forum> = new MatTableDataSource();
-  displayedColumns: string[] = [
-    "c1",
-    "c2",
-    "c3",
-    "c4",
-    "c5",
-    "accion01",
-    "accion02",
-  ];
-  mensaje: string = ""; // Mensaje de error para eliminar
-  // ViewChild para acceder al paginator
-  // Referencia al paginador
   @ViewChild(MatPaginator) paginator!: MatPaginator;
-  constructor(private fS: ForumService, private router: Router) {}
+
+  mensaje: string = '';
+
+  constructor(private fS: ForumService) {}
+
   ngOnInit(): void {
     this.fS.list().subscribe((data) => {
       this.dataSource = new MatTableDataSource(data);
       this.dataSource.paginator = this.paginator;
     });
-    this.fS.getlist().subscribe((data) => {
-      this.dataSource = new MatTableDataSource(data);
-      //this.dataSource.paginator = this.paginator; // Configura el paginador aquí*/
-      this.dataSource.data = data;
-    });
   }
 
-
-  eliminar(id: number) {
-    
-    if (confirm("¿Estás seguro de que quieres eliminar este foro?")) {
-      this.fS
-        .delete(id)
-        .pipe(
-          catchError((error) => {
-            this.mensaje =
-              "No se puede eliminar este foro, ya que está asociado a otros registros.";
-            this.ocultarMensaje();
-            return of(null);
-          })
-        )
-        .subscribe((data) => {
-          console.log("Respuesta de la eliminación:", data);
-          if (data) {
-            // Recargar la lista de foros después de la eliminación
-            this.cargarForos();
-          }
+  eliminar(id: number): void {
+    this.fS
+      .delete(id)
+      .pipe(
+        catchError((error) => {
+          this.mensaje = 'No se puede eliminar, tiene datos asociados.';
+          this.ocultarMensaje();
+          return of(null);
+        })
+      )
+      .subscribe(() => {
+        this.fS.list().subscribe((data) => {
+          this.dataSource = new MatTableDataSource(data);
+          this.dataSource.paginator = this.paginator;
         });
-        console.log("Eliminando foro con ID:", id); // Verifica el ID
-    }
-     // Redirige a la lista de foros
-     this.router.navigate(["foros"]);
-  }
-  editar(id: number) {
-    this.router.navigate(["creaeditaforum", id]); // Redirigir al componente de edición
-  }
-    // Método para cargar la lista de foros
-    cargarForos() {
-      this.fS.list().subscribe((data) => {
-        this.dataSource = new MatTableDataSource(data);
-        this.dataSource.paginator = this.paginator;
       });
-    }
-  // Función para ocultar el mensaje de error después de 3 segundos
-  ocultarMensaje() {
-    setTimeout(() => {
-      this.mensaje = "";
-    }, 3000);
   }
-  // Configurar el paginador en AfterViewInit
-  ngAfterViewInit() {
-    this.dataSource.paginator = this.paginator;
+
+  ocultarMensaje(): void {
+    setTimeout(() => {
+      this.mensaje = '';
+    }, 3000);
   }
 }

@@ -1,71 +1,51 @@
 <div class="container">
-  <div class="header">
-    <h1>Lista de Foros Publicados</h1>
+  <br />
+  <h2 class="text-center text-primary">Lista de Foros</h2>
+  <div class="text-end mb-3">
+    <button mat-raised-button color="primary" routerLink="/foros/nuevo">
+      Nuevo
+    </button>
   </div>
 
-  <div class="table-container">
-    <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
-      <!-- Id Column -->
-      <ng-container matColumnDef="c1">
-        <th mat-header-cell *matHeaderCellDef>Id</th>
-        <td mat-cell *matCellDef="let element">{{ element.id }}</td>
-      </ng-container>
-
-      <!-- Title Column -->
-      <ng-container matColumnDef="c2">
-        <th mat-header-cell *matHeaderCellDef>Título</th>
-        <td mat-cell *matCellDef="let element">{{ element.title }}</td>
-      </ng-container>
-
-      <!-- Description Column -->
-      <ng-container matColumnDef="c3">
-        <th mat-header-cell *matHeaderCellDef>Descripción</th>
-        <td mat-cell *matCellDef="let element">{{ element.description }}</td>
-      </ng-container>
-
-      <!-- Date Column -->
-      <ng-container matColumnDef="c4">
-        <th mat-header-cell *matHeaderCellDef>Fecha</th>
-        <td mat-cell *matCellDef="let element">{{ element.date }}</td>
-      </ng-container>
-
-      <!-- Psychologist Column -->
-      <ng-container matColumnDef="c5">
-        <th mat-header-cell *matHeaderCellDef>Psicólogo</th>
-        <td mat-cell *matCellDef="let element">
-          {{ element.psychologist.username }}
-        </td>
-      </ng-container>
-      <!--para eidtar(12/11/24)-->
-      <ng-container matColumnDef="accion01">
-        <th mat-header-cell *matHeaderCellDef>Editar</th>
-        <td
-          mat-cell
-          *matCellDef="let element"
-          [routerLink]="['/foros/ediciones', element.id]"
-        >
-          <mat-icon style="color: hsl(26, 92%, 43%)">edit</mat-icon>
-        </td>
-      </ng-container>
-      <!-- Delimanr -->
-      <ng-container matColumnDef="accion02">
-        <th mat-header-cell *matHeaderCellDef>Eliminar</th>
-        <td mat-cell *matCellDef="let element" (click)="eliminar(element.id)">
-          <mat-icon style="color: hsl(26, 92%, 43%)">delete</mat-icon>
-        </td>
-      </ng-container>
-      <!-- Table Rows -->
-      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-      <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
-    </table>
-
-    <mat-paginator
-      [length]="dataSource.data.length"
-      [pageSize]="5"
-      [pageSizeOptions]="[5, 10, 25, 100]"
-      aria-label="Select page"
-    >
-    
-    </mat-paginator>
+  <!-- Mostrar mensaje de error si existe -->
+  <div *ngIf="mensaje" class="alert text-center">
+    {{ mensaje }}
   </div>
+
+  <!-- Mat Cards -->
+  <div class="row">
+    <div class="col-md-4 mb-4" *ngFor="let element of dataSource.data">
+      <div class="card shadow-sm rounded forum-card">
+        <div class="card-header text-white bg-primary">
+          <h5 class="card-title">{{ element.title }}</h5>
+        </div>
+        <div class="card-body">
+          <p><strong>Código:</strong> {{ element.id }}</p>
+          <p><strong>Fecha:</strong> {{ element.date | date: 'dd-MM-yyyy' }}</p>
+          <p><strong>Descripción:</strong> {{ element.description }}</p>
+          <p><strong>Psicólogo:</strong> {{ element.psychologist.username }}</p>
+        </div>
+        <div class="card-footer text-center">
+          <button class="btn btn-outline-primary btn-sm me-2" [routerLink]="['ediciones', element.id]">
+            <mat-icon>edit</mat-icon> Actualizar
+          </button>
+          <button class="btn btn-outline-danger btn-sm" (click)="eliminar(element.id)">
+            <mat-icon>delete</mat-icon> Eliminar
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Mostrar mensaje si no hay foros -->
+  <div *ngIf="dataSource.data.length === 0" class="text-center mt-4">
+    <p class="text-muted">No hay foros disponibles.</p>
+  </div>
+
+  <!-- Paginador -->
+  <mat-paginator
+    [pageSizeOptions]="[5, 10, 15]"
+    showFirstLastButtons
+    aria-label="Select page of periodic elements"
+  ></mat-paginator>
 </div>
