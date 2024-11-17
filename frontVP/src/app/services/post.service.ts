@@ -9,7 +9,7 @@ const base = environment.base;
   providedIn: 'root'
 })
 export class PostService {
-  private url = `${base}/publicaciones`;
+  private url = `${base}/publicar`;
 
   private listaCambio = new Subject<Post[]>();
   constructor(private http:HttpClient) { }
@@ -27,7 +27,7 @@ export class PostService {
     return this.listaCambio.asObservable();
   }
   listId(id: number) {
-    return this.http.get<Post>(`${this.url}/${id}`);
+    return this.http.get<Post>(`${this.url}/listar/${id}`);
   }
   update(p: Post) {
     return this.http.put(this.url, p);

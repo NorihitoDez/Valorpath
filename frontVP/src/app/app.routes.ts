@@ -149,7 +149,7 @@ export const routes: Routes = [
     children:[
       {
         path:'nuevo',
-        component: PostComponent,
+        component: PostCreaeditaComponent,
       },
       {
         path:'ediciones/:id',
