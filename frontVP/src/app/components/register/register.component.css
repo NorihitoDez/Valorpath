@@ -25,7 +25,8 @@
   }
   
   .login-header .logo {
-    width: 150px; /* Tamaño del logo */
+    width: 100px !important; /* Forzamos el tamaño */
+    height: auto; /* Mantiene la proporción */
     margin-bottom: 10px;
   }
   
